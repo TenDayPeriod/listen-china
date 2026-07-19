@@ -18,14 +18,14 @@ export const products = [
     price: 86000,
     stock: 0,
     images: [
-      'img/bamboo/1.jpg',
-      'img/bamboo/2.jpg',
-      'img/bamboo/3.jpg',
-      'img/bamboo/4.jpg',
-      'img/bamboo/5.jpg',
-      'img/bamboo/6.jpg',
-      'img/bamboo/7.jpg',
-      'img/bamboo/8.jpg',
+      '/img/bamboo/1.jpg',
+      '/img/bamboo/2.jpg',
+      '/img/bamboo/3.jpg',
+      '/img/bamboo/4.jpg',
+      '/img/bamboo/5.jpg',
+      '/img/bamboo/6.jpg',
+      '/img/bamboo/7.jpg',
+      '/img/bamboo/8.jpg',
     ]
   },
   {
@@ -71,9 +71,9 @@ export const products = [
     price: 29999,
     stock: 0,
     images: [
-      'img/panda/1.jpg',
-      'img/panda/2.jpg',
-      'img/panda/3.jpg'
+      '/img/panda/1.jpg',
+      '/img/panda/2.jpg',
+      '/img/panda/3.jpg'
     ]
   }
 ];

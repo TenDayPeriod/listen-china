@@ -394,6 +394,18 @@ body {
   .carousel {
     height: 240px;
   }
+
+  .carousel-btn {
+    opacity: 1;
+  }
+
+  .carousel-image {
+    touch-action: pan-y;
+  }
+
+  .lightbox-image {
+    touch-action: pan-y;
+  }
 }
 
 @media (max-width: 480px) {

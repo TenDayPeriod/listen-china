@@ -1,6 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function Lightbox({ isOpen, images, currentIndex, onClose, onPrev, onNext }) {
+  const touchStartX = useRef(null)
+  const touchEndX = useRef(null)
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isOpen) return
@@ -20,10 +23,43 @@ export default function Lightbox({ isOpen, images, currentIndex, onClose, onPrev
     }
   }, [isOpen])
 
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX
+    touchEndX.current = null
+  }
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return
+
+    const diff = touchStartX.current - touchEndX.current
+    const threshold = 50
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        onNext()
+      } else {
+        onPrev()
+      }
+    }
+
+    touchStartX.current = null
+    touchEndX.current = null
+  }
+
   if (!isOpen || !images || images.length === 0) return null
 
   return (
-    <div className="lightbox" onClick={onClose}>
+    <div
+      className="lightbox"
+      onClick={onClose}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <button className="lightbox-close" onClick={onClose}>&times;</button>
       <button className="lightbox-prev" onClick={(e) => { e.stopPropagation(); onPrev(); }}>
         &#10094;
