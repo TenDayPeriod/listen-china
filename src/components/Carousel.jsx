@@ -44,6 +44,9 @@ export default function Carousel({ images, productName, onImageClick }) {
     touchEndX.current = null
   }
 
+  const prevIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1
+  const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1
+
   return (
     <div
       className="carousel"
@@ -57,6 +60,32 @@ export default function Carousel({ images, productName, onImageClick }) {
         alt={productName}
         onClick={() => onImageClick && onImageClick(currentIndex)}
       />
+      <img
+        src={images[prevIndex]}
+        alt=""
+        className="carousel-preload"
+        loading="lazy"
+      />
+      <img
+        src={images[nextIndex]}
+        alt=""
+        className="carousel-preload"
+        loading="lazy"
+      />
+      {images.map((img, index) => {
+        if (index !== currentIndex && index !== prevIndex && index !== nextIndex) {
+          return (
+            <img
+              key={`preload-${index}`}
+              src={img}
+              alt=""
+              className="carousel-preload"
+              loading="lazy"
+            />
+          )
+        }
+        return null
+      })}
       <button className="carousel-btn prev" onClick={goToPrev}>
         &#10094;
       </button>

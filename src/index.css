@@ -133,6 +133,10 @@ body {
   cursor: pointer;
 }
 
+.carousel-preload {
+  display: none;
+}
+
 .carousel-nav {
   position: absolute;
   bottom: 12px;
