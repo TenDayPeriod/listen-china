@@ -71,7 +71,8 @@ body {
 }
 
 .main {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
   flex: 1;
@@ -288,10 +289,41 @@ body {
   visibility: visible;
 }
 
+.product-subprices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed #e0d6c8;
+}
+
+.subprice-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.subprice-label {
+  color: #888;
+}
+
+.subprice-value {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
 .product-price {
   display: flex;
   align-items: baseline;
   gap: 0.3rem;
+}
+
+.price-label {
+  font-size: 0.85rem;
+  color: #888;
+  margin-right: 0.3rem;
 }
 
 .price-symbol {
@@ -351,9 +383,19 @@ body {
   object-fit: contain;
 }
 
+.lightbox-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
 .lightbox-close,
 .lightbox-prev,
-.lightbox-next {
+.lightbox-next,
+.lightbox-rotate {
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
@@ -365,7 +407,8 @@ body {
 
 .lightbox-close:hover,
 .lightbox-prev:hover,
-.lightbox-next:hover {
+.lightbox-next:hover,
+.lightbox-rotate:hover {
   background: rgba(255, 255, 255, 0.4);
 }
 
@@ -392,6 +435,19 @@ body {
 
 .lightbox-next {
   right: 20px;
+}
+
+.lightbox-rotate {
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+
+.lightbox-image {
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {

@@ -1,8 +1,10 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Lightbox({ isOpen, images, currentIndex, onClose, onPrev, onNext }) {
   const touchStartX = useRef(null)
   const touchEndX = useRef(null)
+  const [rotation, setRotation] = useState(0)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -10,6 +12,7 @@ export default function Lightbox({ isOpen, images, currentIndex, onClose, onPrev
       if (e.key === 'Escape') onClose()
       if (e.key === 'ArrowLeft') onPrev()
       if (e.key === 'ArrowRight') onNext()
+      if (e.key === 'r' || e.key === 'R') setRotation(r => r + 90)
     }
 
     document.addEventListener('keydown', handleKeyDown)
@@ -22,6 +25,16 @@ export default function Lightbox({ isOpen, images, currentIndex, onClose, onPrev
       document.body.style.overflow = ''
     }
   }, [isOpen])
+
+  useEffect(() => {
+    setRotation(0)
+  }, [currentIndex])
+
+  useEffect(() => {
+    if (isOpen) {
+      setLoading(true)
+    }
+  }, [isOpen, currentIndex])
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX
@@ -60,6 +73,11 @@ export default function Lightbox({ isOpen, images, currentIndex, onClose, onPrev
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+      {loading && (
+        <div className="lightbox-loader">
+          <div className="spinner"></div>
+        </div>
+      )}
       <button className="lightbox-close" onClick={onClose}>&times;</button>
       <button className="lightbox-prev" onClick={(e) => { e.stopPropagation(); onPrev(); }}>
         &#10094;
@@ -67,10 +85,18 @@ export default function Lightbox({ isOpen, images, currentIndex, onClose, onPrev
       <button className="lightbox-next" onClick={(e) => { e.stopPropagation(); onNext(); }}>
         &#10095;
       </button>
+      <button
+        className="lightbox-rotate"
+        onClick={(e) => { e.stopPropagation(); setRotation(r => r + 90); }}
+      >
+        &#10227;
+      </button>
       <img
         className="lightbox-image"
         src={images[currentIndex]}
         alt=""
+        style={{ transform: `rotate(${rotation}deg)` }}
+        onLoad={() => setLoading(false)}
         onClick={(e) => e.stopPropagation()}
       />
     </div>
