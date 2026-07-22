@@ -45,7 +45,7 @@ export default function App() {
         <section className="collection">
           <div className="products-grid">
             {products.map(product => (
-              <ProductCard
+              <ProductCard 
                 key={product.id}
                 product={product}
                 onImageClick={openLightbox}
