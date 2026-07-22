@@ -2,19 +2,26 @@ import { useState, useRef } from 'react'
 
 export default function Carousel({ images, productName, onImageClick }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [loading, setLoading] = useState(false)
   const touchStartX = useRef(null)
   const touchEndX = useRef(null)
 
+  const switchTo = (newIndex) => {
+    if (newIndex === currentIndex) return
+    setLoading(true)
+    setCurrentIndex(newIndex)
+  }
+
   const goToPrev = () => {
-    setCurrentIndex(prev => prev === 0 ? images.length - 1 : prev - 1)
+    switchTo(currentIndex === 0 ? images.length - 1 : currentIndex - 1)
   }
 
   const goToNext = () => {
-    setCurrentIndex(prev => prev === images.length - 1 ? 0 : prev + 1)
+    switchTo(currentIndex === images.length - 1 ? 0 : currentIndex + 1)
   }
 
   const goToIndex = (index) => {
-    setCurrentIndex(index)
+    switchTo(index)
   }
 
   const handleTouchStart = (e) => {
@@ -54,10 +61,16 @@ export default function Carousel({ images, productName, onImageClick }) {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+      {loading && (
+        <div className="carousel-loader">
+          <div className="spinner"></div>
+        </div>
+      )}
       <img
         className="carousel-image"
         src={images[currentIndex]}
         alt={productName}
+        onLoad={() => setLoading(false)}
         onClick={() => onImageClick && onImageClick(currentIndex)}
       />
       <img
