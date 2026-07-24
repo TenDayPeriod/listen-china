@@ -2,12 +2,14 @@ export const products = [
   {
     id: 1,
     name: '青花缠枝莲',
+    category: '套组',
+    dynasty: '仿明',
+    craft: '釉下彩',
     description: '',
     price: 10500,
     cupPrice: 2599,
     gaiwanPrice: 3999,
     saucerPrice: 3999,
-    stock: 3,
     images: [
       '/img/qinghua/chan1.jpg',
       '/img/qinghua/chan2.jpg',
@@ -18,29 +20,33 @@ export const products = [
   {
     id: 2,
     name: '冰梅',
+    category: '套组',
+    dynasty: '仿清',
+    craft: '釉下彩',
     description: '',
     price: 11500,
     cupPrice: 2999,
     gaiwanPrice: 4299,
     saucerPrice: 4299,
-    stock: 1,
     images: [
+      '/img/bingmei/5.jpg',
       '/img/bingmei/1.jpg',
       '/img/bingmei/2.jpg',
       '/img/bingmei/3.jpg',
       '/img/bingmei/4.jpg',
-      '/img/bingmei/5.jpg',
     ]
   },
   {
     id: 3,
     name: '缠枝莲釉里红',
+    category: '套组',
+    dynasty: '仿明',
+    craft: '釉下彩',
     description: '',
     price: 13999,
     cupPrice: 3399,
     gaiwanPrice: 5399,
     saucerPrice: 5399,
-    stock: 3,
     images: [
       '/img/youlihongchanzhi/1.jpg',
     ]
@@ -48,12 +54,14 @@ export const products = [
   {
     id: 4,
     name: '缠枝莲釉里红（双狮）',
+    category: '套组',
+    dynasty: '仿明',
+    craft: '釉下彩',
     description: '',
     price: 18900,
     cupPrice: 4999,
     gaiwanPrice: 5399,
     saucerPrice: 5399,
-    stock: 3,
     images: [
       '/img/youlihongshuangshi/1.jpg',
       '/img/youlihongshuangshi/2.jpg',
@@ -63,15 +71,16 @@ export const products = [
   {
     id: 5,
     name: '青花松竹梅',
+    category: '套组',
+    dynasty: '仿明',
+    craft: '釉下彩',
     description: '',
     price: 13999,
     cupPrice: 3599,
     gaiwanPrice: 5299,
     saucerPrice: 5299,
-    stock: 0,
     images: [
       '/img/bamboo/2.jpg',
-      '/img/bamboo/1.jpg',
       '/img/bamboo/3.jpg',
       '/img/bamboo/4.jpg',
       '/img/bamboo/5.jpg',
@@ -81,14 +90,30 @@ export const products = [
     ]
   },
   {
+    id: 500001,
+    name: '青花松竹梅八方杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: '釉下彩',
+    description: '',
+    price: 4999,
+    images: [
+      '/img/bamboo/1.jpg',
+      '/img/bamboo/9.jpg',
+      '/img/bamboo/10.jpg',
+    ]
+  },
+  {
     id: 6,
     name: '釉里红松竹梅',
+    category: '套组',
+    dynasty: '仿明',
+    craft: '釉下彩',
     description: '',
     price: 18900,
     cupPrice: 4999,
     gaiwanPrice: 6999,
     saucerPrice: 6999,
-    stock: 0,
     images: [
       '/img/songzhumeiyoulihong/hongsong1.jpg',
       '/img/songzhumeiyoulihong/songhong2.jpg',
@@ -97,14 +122,31 @@ export const products = [
     ]
   },
   {
+    id: 600001,
+    name: '釉里红松竹梅八方杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: '釉下彩',
+    description: '',
+    price: 7499,
+    images: [
+      '/img/songzhumeiyoulihong/3.jpg',
+      '/img/songzhumeiyoulihong/1.jpg',
+      '/img/songzhumeiyoulihong/2.jpg',
+      '/img/songzhumeiyoulihong/4.jpg',
+    ]
+  },
+  {
     id: 7,
     name: '江崖海水',
+    category: '套组',
+    dynasty: '仿明',
+    craft: '釉下彩',
     description: '',
     price: 16999,
     cupPrice: 4399,
     gaiwanPrice: 5999,
     saucerPrice: 5999,
-    stock: 2,
     images: [
       '/img/jiangyahaishui/1.jpg',
       '/img/jiangyahaishui/2.jpg',
@@ -116,12 +158,14 @@ export const products = [
   {
     id: 8,
     name: '云龙',
+    category: '套组',
+    dynasty: '仿清',
+    craft: '釉下彩',
     description: '',
     price: 21000,
     cupPrice: 5889,
     gaiwanPrice: 7889,
     saucerPrice: 7889,
-    stock: 2,
     images: [
       '/img/yunlong/yun2.jpg',
       '/img/yunlong/yun1.jpg',
@@ -132,12 +176,14 @@ export const products = [
   {
     id: 9,
     name: '矾红鳜鱼',
+    category: '套组',
+    dynasty: '仿明',
+    craft: '釉上彩',
     description: '',
     price: 21000,
     cupPrice: 5559,
     gaiwanPrice: 7800,
     saucerPrice: 7800,
-    stock: 2,
     images: [
       '/img/fanhongguiyu/1.jpg',
       '/img/fanhongguiyu/2.jpg',
@@ -148,12 +194,14 @@ export const products = [
   {
     id: 10,
     name: '墨龙1.0',
+    category: '套组',
+    dynasty: '仿清',
+    craft: '釉上彩',
     description: '',
     price: 27500,
     cupPrice: 8289,
     gaiwanPrice: 9999,
     saucerPrice: 9999,
-    stock: 5,
     images: [
       '/img/molong1/1.jpg',
       '/img/molong1/2.jpg',
@@ -161,17 +209,206 @@ export const products = [
   },
   {
     id: 11,
+    name: '墨龙2.0',
+    category: '套组',
+    dynasty: '仿清',
+    craft: '釉上彩',
+    description: '',
+    price: 37500,
+    cupPrice: 9999,
+    gaiwanPrice: 13999,
+    saucerPrice: 13999,
+    images: [
+      '/img/mo2/1.jpg',
+      '/img/mo2/2.jpg',
+      '/img/mo2/3.jpg',
+      '/img/mo2/4.jpg',
+    ]
+  },
+  {
+    id: 12,
     name: '慵懒熊猫(矾红枫叶)',
+    category: '套组',
+    dynasty: '仿清',
+    craft: '釉上彩',
     description: '',
     price: 29999,
     cupPrice: 8599,
     gaiwanPrice: 11599,
     saucerPrice: 11599,
-    stock: 0,
     images: [
       '/img/panda/1.jpg',
       '/img/panda/2.jpg',
       '/img/panda/3.jpg'
+    ]
+  },
+  {
+    id: 13,
+    name: '十二报喜图',
+    category: '套组',
+    dynasty: '仿清',
+    craft: '釉下彩',
+    description: '',
+    price: 24000,
+    cupPrice: 5200,
+    gaiwanPrice: 9680,
+    saucerPrice: 9680,
+    images: [
+      '/img/happy/1.jpg',
+      '/img/happy/2.jpg',
+      '/img/happy/3.jpg',
+      '/img/happy/4.jpg',
+      '/img/happy/5.jpg',
+    ]
+  },
+  {
+    id: 14,
+    name: '仿清鱼藻',
+    category: '套组',
+    dynasty: '仿清',
+    craft: '釉下彩',
+    description: '',
+    price: 16999,
+    cupPrice: 4399,
+    gaiwanPrice: 5999,
+    saucerPrice: 5999,
+    images: [
+      '/img/qingyu/1.jpg',
+      '/img/qingyu/2.jpg',
+      '/img/qingyu/3.jpg',
+      '/img/qingyu/4.jpg',
+    ]
+  },
+  {
+    id: 15,
+    name: '五龙八方杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: '釉下彩',
+    description: '',
+    price: 10999,
+    images: [
+      '/img/5long8fang/1.jpg',
+      '/img/5long8fang/2.jpg',
+      '/img/5long8fang/3.jpg',
+    ]
+  },
+  {
+    id: 16,
+    name: '单线缠枝',
+    category: '套组',
+    dynasty: '仿明',
+    craft: '釉下彩',
+    description: '',
+    price: 11999,
+    images: [
+      '/img/singlechan/1.jpg',
+      '/img/singlechan/2.jpg',
+      '/img/singlechan/3.jpg',
+    ]
+  },
+  {
+    id: 17,
+    name: '仿元龙纹',
+    category: '套组',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    price: 11999,
+    images: [
+      '/img/yuanlong/1.jpg',
+      '/img/yuanlong/2.jpg',
+      '/img/yuanlong/3.jpg',
+      '/img/yuanlong/4.jpg',
+    ]
+  },
+  {
+    id: 18,
+    name: '仿元鱼藻',
+    category: '套组',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    price: 11999,
+    images: [
+      '/img/yuanyu/1.jpg',
+      '/img/yuanyu/2.jpg',
+      '/img/yuanyu/3.jpg',
+    ]
+  },
+  {
+    id: 19,
+    name: '太平有象',
+    category: '套组',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    price: 11999,
+    images: [
+      '/img/taiping/1.jpg',
+      '/img/taiping/2.jpg',
+      '/img/taiping/3.jpg',
+    ]
+  },
+  {
+    id: 20,
+    name: '单线牡丹',
+    category: '套组',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    price: 11999,
+    images: [
+      '/img/singlemudan/2.jpg',
+      '/img/singlemudan/1.jpg',
+      '/img/singlemudan/3.jpg',
+      '/img/singlemudan/4.jpg',
+    ]
+  },
+  {
+    id: 21,
+    name: '四向牡丹',
+    category: '套组',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    price: 11999,
+    images: [
+      '/img/sixiang/2.jpg',
+      '/img/sixiang/3.jpg',
+      '/img/sixiang/4.jpg',
+      '/img/sixiang/1.jpg',
+    ]
+  },
+  {
+    id: 22,
+    name: '一鹭连科',
+    category: '套组',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    price: 11999,
+    images: [
+      '/img/yilu/1.jpg',
+      '/img/yilu/2.jpg',
+      '/img/yilu/3.jpg',
+    ]
+  }
+  ,
+  {
+    id: 12345,
+    name: '鳄鱼茶宠',
+    category: '单品',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    price: 99999999,
+    images: [
+      '/img/eyu/1.jpg',
+      '/img/eyu/2.jpg',
+      '/img/eyu/3.jpg',
+      '/img/eyu/4.jpg',
+      '/img/eyu/5.jpg',
     ]
   }
 ];

@@ -1,4 +1,5 @@
 import Carousel from './Carousel'
+import { stockMap } from '../data/stock'
 
 function formatPrice(price) {
   return price.toLocaleString('zh-CN')
@@ -9,6 +10,14 @@ export default function ProductCard({ product, onImageClick }) {
     { label: '杯子', value: product.cupPrice },
     { label: '盖碗', value: product.gaiwanPrice },
     { label: '壶承', value: product.saucerPrice },
+  ].filter(item => item.value > 0)
+
+  const stock = stockMap[product.id] || {}
+  const stockItems = [
+    { label: '杯子', value: stock.cupStock || 0 },
+    { label: '盖碗', value: stock.gaiwanStock || 0 },
+    { label: '壶承', value: stock.saucerStock || 0 },
+    { label: '八方杯', value: stock.cup8Stock || 0 },
   ].filter(item => item.value > 0)
 
   return (
@@ -31,11 +40,20 @@ export default function ProductCard({ product, onImageClick }) {
           </div>
         )}
         <div className="product-stock">
-          <span className="stock-label">库存：</span>
-          <span className={`stock-value ${product.stock === 0 ? 'stock-zero' : ''}`}>
-            {product.stock}
-          </span>
-          <span className="stock-unit">件</span>
+          {stockItems.length > 0 && (
+            <>
+              <span className="stock-label">库存：</span>
+              {stockItems.map(item => (
+                <span
+                  key={item.label}
+                  className="stock-item"
+                >
+                  <span className="stock-type">{item.label}</span>
+                  <span className="stock-value">{item.value}</span>
+                </span>
+              ))}
+            </>
+          )}
         </div>
         {subPrices.length > 0 && (
           <div className="product-subprices">
