@@ -572,21 +572,15 @@ body {
   }
 
   .filters {
-    gap: 0.8rem;
+    gap: 0.6rem 0.8rem;
     padding: 0.7rem 0.8rem;
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-bottom: 1.2rem;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .filters::-webkit-scrollbar {
-    display: none;
   }
 
   .filter-group {
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 0.4rem;
   }
 
   .filter-btn {
@@ -653,7 +647,8 @@ body {
     margin-bottom: 0.35rem;
     padding-bottom: 0.35rem;
     gap: 0.2rem;
-    height: 1.8rem;
+    min-height: 2.8rem;
+    height: auto;
     overflow: hidden;
   }
 
@@ -664,10 +659,10 @@ body {
   .stock-item {
     min-width: auto;
     height: 1.2rem;
-    padding: 0 0.35rem;
-    font-size: 0.65rem;
+    padding: 0 0.3rem;
+    font-size: 0.62rem;
     border-radius: 6px;
-    gap: 0.15rem;
+    gap: 0.1rem;
   }
 
   .product-subprices {
@@ -757,15 +752,16 @@ body {
   }
 
   .product-stock {
-    height: 1.6rem;
+    min-height: 2.6rem;
+    height: auto;
     margin-bottom: 0.25rem;
     padding-bottom: 0.25rem;
   }
 
   .stock-item {
     height: 1.1rem;
-    padding: 0 0.3rem;
-    font-size: 0.6rem;
+    padding: 0 0.28rem;
+    font-size: 0.58rem;
     border-radius: 5px;
   }
 
