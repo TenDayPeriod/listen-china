@@ -300,7 +300,7 @@ export const products = [
     dynasty: '仿明',
     craft: '釉下彩',
     description: '',
-    price: 11999,
+    price: 21999,
     images: [
       '/img/singlechan/1.jpg',
       '/img/singlechan/2.jpg',
