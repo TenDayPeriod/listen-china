@@ -581,6 +581,8 @@ body {
   .filter-group {
     flex-wrap: wrap;
     gap: 0.4rem;
+    flex-shrink: 1;
+    align-items: center;
   }
 
   .filter-btn {
