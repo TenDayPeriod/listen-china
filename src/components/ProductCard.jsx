@@ -68,7 +68,7 @@ export default function ProductCard({ product, onImageClick }) {
         <div className="product-price">
           <span className="price-label">总价</span>
           <span className="price-symbol">¥</span>
-          <span className="price-value">{formatPrice(product.price)}</span>
+          <span className="price-value">{formatPrice(product?.price || 0)}</span>
         </div>
       </div>
     </div>

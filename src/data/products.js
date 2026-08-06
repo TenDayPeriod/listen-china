@@ -36,21 +36,21 @@ export const products = [
       '/img/bingmei/4.jpg',
     ]
   },
-  {
-    id: 3,
-    name: '缠枝莲釉里红',
-    category: '套组',
-    dynasty: '仿明',
-    craft: '釉下彩',
-    description: '',
-    price: 13999,
-    cupPrice: 3399,
-    gaiwanPrice: 5399,
-    saucerPrice: 5399,
-    images: [
-      '/img/youlihongchanzhi/1.jpg',
-    ]
-  },
+  // {
+  //   id: 3,
+  //   name: '缠枝莲釉里红',
+  //   category: '套组',
+  //   dynasty: '仿明',
+  //   craft: '釉下彩',
+  //   description: '',
+  //   price: 13999,
+  //   cupPrice: 3399,
+  //   gaiwanPrice: 5399,
+  //   saucerPrice: 5399,
+  //   images: [
+  //     '/img/youlihongchanzhi/1.jpg',
+  //   ]
+  // },
   {
     id: 4,
     name: '缠枝莲釉里红（双狮）',
@@ -98,9 +98,9 @@ export const products = [
     description: '',
     price: 4999,
     images: [
-      '/img/bamboo/1.jpg',
-      '/img/bamboo/9.jpg',
-      '/img/bamboo/10.jpg',
+      '/img/bamboo/1.jpeg',
+      '/img/bamboo/9.jpeg',
+      '/img/bamboo/10.jpeg',
     ]
   },
   {
@@ -393,8 +393,94 @@ export const products = [
       '/img/yilu/2.jpg',
       '/img/yilu/3.jpg',
     ]
-  }
-  ,
+  },
+  {
+    id: 23,
+    name: '双狮绣球',
+    category: '套组',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    price: 11999,
+    images: [
+      '/img/lion/1.jpg',
+      '/img/lion/2.jpg',
+      '/img/lion/3.jpg',
+    ]
+  },
+  {
+    id: 24,
+    name: '梵文',
+    category: '福利品',
+    dynasty: '仿元',
+    craft: '釉下彩',
+    description: '',
+    cupPrice: 1099,
+    gaiwanPrice: 1299,
+    price: 2359,
+    images: [
+      '/img/fanwen/4.jpg',
+      '/img/fanwen/1.jpg',
+      '/img/fanwen/2.jpg',
+      '/img/fanwen/3.jpg',
+    ]
+  },
+  {
+    id: 25,
+    name: '两龙一凤炉式杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: '釉下彩',
+    description: '',
+    price: 5888,
+    images: [
+      '/img/twoLong/1.jpg',
+      '/img/twoLong/2.jpg',
+      '/img/twoLong/3.jpg',
+      '/img/twoLong/4.jpg',
+    ]
+  },
+  {
+    id: 26,
+    name: '缠枝莲盖置',
+    category: '单品',
+    dynasty: '仿明',
+    craft: '釉下彩',
+    description: '',
+    price: 3299,
+    images: [
+      '/img/gaizhi/1.jpg',
+      '/img/gaizhi/3.jpg',
+      '/img/gaizhi/2.jpg',
+    ]
+  },
+  {
+    id: 27,
+    name: '宝相盖置',
+    category: '单品',
+    dynasty: '仿清',
+    craft: '釉下彩',
+    description: '',
+    price: 3299,
+    images: [
+      '/img/gaizhi/11.jpg',
+      '/img/gaizhi/22.jpg',
+      '/img/gaizhi/33.jpg',
+    ]
+  },
+  {
+    id: 30,
+    name: '万花可乐杯',
+    category: '单品',
+    dynasty: '仿清',
+    craft: '釉下彩',
+    description: '',
+    price: 3299,
+    images: [
+      '/img/flowerCola/1.jpg',
+      '/img/flowerCola/2.jpg',
+    ]
+  },
   {
     id: 12345,
     name: '鳄鱼茶宠',
