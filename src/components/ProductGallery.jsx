@@ -9,7 +9,7 @@ export default function ProductGallery({ products }) {
   const [lightboxImageIndex, setLightboxImageIndex] = useState(0)
   const [categoryFilter, setCategoryFilter] = useState('全部')
   const [dynastyFilter, setDynastyFilter] = useState('全部')
-  const [craftFilter, setCraftFilter] = useState('全部')
+  const [craftFilter, setCraftFilter] = useState([])
 
   const openLightbox = (productId, imageIndex) => {
     setLightboxProductId(productId)
@@ -39,10 +39,20 @@ export default function ProductGallery({ products }) {
     )
   }
 
+  const toggleCraft = (c) => {
+    if (c === '全部') {
+      setCraftFilter([])
+    } else {
+      setCraftFilter(prev =>
+        prev.includes(c) ? prev.filter(x => x !== c) : [...prev, c]
+      )
+    }
+  }
+
   const filteredProducts = products.filter(p => {
     const matchCategory = categoryFilter === '全部' ? p.category !== '福利品' : p.category === categoryFilter
     const matchDynasty = dynastyFilter === '全部' || p.dynasty === dynastyFilter
-    const matchCraft = craftFilter === '全部' || p.craft === craftFilter
+    const matchCraft = craftFilter.length === 0 || craftFilter.every(c => p.craft.includes(c))
     return matchCategory && matchDynasty && matchCraft
   })
 
@@ -79,8 +89,8 @@ export default function ProductGallery({ products }) {
             {craftOptions.map(c => (
               <button
                 key={c}
-                className={`filter-btn ${craftFilter === c ? 'active' : ''}`}
-                onClick={() => setCraftFilter(c)}
+                className={`filter-btn ${(c === '全部' ? craftFilter.length === 0 : craftFilter.includes(c)) ? 'active' : ''}`}
+                onClick={() => toggleCraft(c)}
               >
                 {c}
               </button>

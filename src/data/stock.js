@@ -4,7 +4,7 @@ export const stockList = [
   { id: 1, name: '青花缠枝莲', cupStock: 3, gaiwanStock: 3, saucerStock: 3, cup8Stock: 0 },
   { id: 2, name: '冰梅', cupStock: 1, gaiwanStock: 1, saucerStock: 1, cup8Stock: 0 },
   { id: 3, name: '缠枝莲釉里红', cupStock: 3, gaiwanStock: 3, saucerStock: 3, cup8Stock: 0 },
-  { id: 4, name: '缠枝莲釉里红（双狮）', cupStock: 3, gaiwanStock: 3, saucerStock: 3, cup8Stock: 0 },
+  { id: 4, name: '缠枝莲釉里红（双狮）', cupStock: 0, gaiwanStock: 0, saucerStock: 0, cup8Stock: 0 },
   { id: 5, name: '青花松竹梅', cupStock: 0, gaiwanStock: 0, saucerStock: 0, cup8Stock: 1 },
   { id: 6, name: '釉里红松竹梅', cupStock: 0, gaiwanStock: 0, saucerStock: 0, cup8Stock: 1 },
   { id: 7, name: '江崖海水', cupStock: 2, gaiwanStock: 2, saucerStock: 2, cup8Stock: 0 },

@@ -7,5 +7,5 @@ export const categoryOptions = ['全部', '套组', '单品', '福利品']
 // 朝代：仿清 / 仿明 / 仿元
 export const dynastyOptions = ['全部', '仿清', '仿明', '仿元']
 
-// 工艺：釉下彩 / 釉上彩
-export const craftOptions = ['全部', '釉下彩', '釉上彩']
+// 工艺：青花 / 矾红 / 釉里红 / 釉上彩（商品可同时具备多种工艺）
+export const craftOptions = ['全部', '青花', '矾红', '釉里红', '釉上彩']
