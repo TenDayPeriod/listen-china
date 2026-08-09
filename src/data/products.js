@@ -29,11 +29,11 @@ export const products = [
     gaiwanPrice: 4299,
     saucerPrice: 4299,
     images: [
-      '/img/bingmei/5.jpg',
-      '/img/bingmei/1.jpg',
-      '/img/bingmei/2.jpg',
-      '/img/bingmei/3.jpg',
-      '/img/bingmei/4.jpg',
+      '/img/bingmei/1.JPG',
+      '/img/bingmei/2.JPG',
+      '/img/bingmei/3.JPG',
+      '/img/bingmei/4.JPG',
+      '/img/bingmei/5.JPG',
     ]
   },
   // {
@@ -63,9 +63,41 @@ export const products = [
     gaiwanPrice: 5399,
     saucerPrice: 5399,
     images: [
-      '/img/youlihongshuangshi/1.jpg',
-      '/img/youlihongshuangshi/2.jpg',
-      '/img/youlihongshuangshi/3.jpg',
+      '/img/youlihong/youlihongshuangshi/1.JPG',
+      '/img/youlihong/youlihongshuangshi/2.JPG',
+      '/img/youlihong/youlihongshuangshi/3.JPG',
+      '/img/youlihong/youlihongshuangshi/4.JPG',
+      '/img/youlihong/youlihongshuangshi/5.JPG',
+    ]
+  },
+  {
+    id: 4001,
+    name: '釉里红小客杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花', '釉里红'],
+    description: '20ml小客杯',
+    price: 2288,
+    images: [
+      '/img/youlihong/little/1.JPG',
+      '/img/youlihong/little/2.JPG',
+    ]
+  },
+  {
+    id: 4002,
+    name: '釉里红可乐杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花', '釉里红'],
+    description: '320ml可乐杯/420ml可乐杯',
+    price: 6999,
+    images: [
+      '/img/youlihong/cola/1.JPG',
+      '/img/youlihong/cola/2.JPG',
+      '/img/youlihong/cola/3.JPG',
+      '/img/youlihong/cola/4.JPG',
+      '/img/youlihong/cola/5.JPG',
+      '/img/youlihong/cola/6.JPG',
     ]
   },
   {
@@ -115,10 +147,12 @@ export const products = [
     gaiwanPrice: 6999,
     saucerPrice: 6999,
     images: [
-      '/img/songzhumeiyoulihong/hongsong1.jpg',
-      '/img/songzhumeiyoulihong/songhong2.jpg',
-      '/img/songzhumeiyoulihong/songhong3.jpg',
-      '/img/songzhumeiyoulihong/songhong4.jpg',
+      '/img/youlihong/songzhumeiyoulihong/1.JPG',
+      '/img/youlihong/songzhumeiyoulihong/2.JPG',
+      '/img/youlihong/songzhumeiyoulihong/3.JPG',
+      '/img/youlihong/songzhumeiyoulihong/4.JPG',
+      '/img/youlihong/songzhumeiyoulihong/5.JPG',
+      '/img/youlihong/songzhumeiyoulihong/6.JPG',
     ]
   },
   {
@@ -130,10 +164,9 @@ export const products = [
     description: '',
     price: 7499,
     images: [
-      '/img/songzhumeiyoulihong/3.jpg',
-      '/img/songzhumeiyoulihong/1.jpg',
-      '/img/songzhumeiyoulihong/2.jpg',
-      '/img/songzhumeiyoulihong/4.jpg',
+      '/img/youlihong/songzhumeiyoulihong/7.JPG',
+      '/img/youlihong/songzhumeiyoulihong/8.JPG',
+      '/img/youlihong/songzhumeiyoulihong/9.JPG',
     ]
   },
   {
@@ -148,11 +181,11 @@ export const products = [
     gaiwanPrice: 5999,
     saucerPrice: 5999,
     images: [
-      '/img/jiangyahaishui/1.jpg',
-      '/img/jiangyahaishui/2.jpg',
-      '/img/jiangyahaishui/3.jpg',
-      '/img/jiangyahaishui/5.jpg',
-      '/img/jiangyahaishui/4.jpg',
+      '/img/jiangyahaishui/1.JPG',
+      '/img/jiangyahaishui/2.JPG',
+      '/img/jiangyahaishui/3.JPG',
+      '/img/jiangyahaishui/4.JPG',
+      '/img/jiangyahaishui/5.JPG',
     ]
   },
   {
@@ -203,8 +236,10 @@ export const products = [
     gaiwanPrice: 9999,
     saucerPrice: 9999,
     images: [
-      '/img/molong1/1.jpg',
-      '/img/molong1/2.jpg',
+      '/img/molong1/1.JPG',
+      '/img/molong1/2.JPG',
+      '/img/molong1/3.JPG',
+      '/img/molong1/4.JPG',
     ]
   },
   {
@@ -273,10 +308,11 @@ export const products = [
     gaiwanPrice: 5999,
     saucerPrice: 5999,
     images: [
-      '/img/qingyu/1.jpg',
-      '/img/qingyu/2.jpg',
-      '/img/qingyu/3.jpg',
-      '/img/qingyu/4.jpg',
+      '/img/qingyu/1.JPG',
+      '/img/qingyu/2.JPG',
+      '/img/qingyu/3.JPG',
+      '/img/qingyu/4.JPG',
+      '/img/qingyu/5.JPG',
     ]
   },
   {
@@ -288,9 +324,9 @@ export const products = [
     description: '',
     price: 10999,
     images: [
-      '/img/5long8fang/1.jpg',
-      '/img/5long8fang/2.jpg',
-      '/img/5long8fang/3.jpg',
+      '/img/5long8fang/1.JPG',
+      '/img/5long8fang/2.JPG',
+      '/img/5long8fang/3.JPG',
     ]
   },
   {
@@ -374,10 +410,11 @@ export const products = [
     description: '',
     price: 11999,
     images: [
-      '/img/sixiang/2.jpg',
-      '/img/sixiang/3.jpg',
-      '/img/sixiang/4.jpg',
-      '/img/sixiang/1.jpg',
+      '/img/sixiang/1.JPG',
+      '/img/sixiang/2.JPG',
+      '/img/sixiang/3.JPG',
+      '/img/sixiang/4.JPG',
+      '/img/sixiang/5.JPG',
     ]
   },
   {
@@ -389,9 +426,11 @@ export const products = [
     description: '',
     price: 11999,
     images: [
-      '/img/yilu/1.jpg',
-      '/img/yilu/2.jpg',
-      '/img/yilu/3.jpg',
+      '/img/yilu/1.JPG',
+      '/img/yilu/2.JPG',
+      '/img/yilu/3.JPG',
+      '/img/yilu/4.JPG',
+      '/img/yilu/5.JPG',
     ]
   },
   {
@@ -403,13 +442,29 @@ export const products = [
     description: '',
     price: 11999,
     images: [
-      '/img/lion/1.jpg',
-      '/img/lion/2.jpg',
-      '/img/lion/3.jpg',
+      '/img/lion/1.JPG',
+      '/img/lion/2.JPG',
+      '/img/lion/3.JPG',
+      '/img/lion/4.JPG',
+      '/img/lion/5.JPG',
     ]
   },
   {
     id: 24,
+    name: '鱼藻釉里红将军罐',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花', '釉里红'],
+    description: '',
+    price: 12000,
+    images: [
+      '/img/youlihong/general/1.JPG',
+      '/img/youlihong/general/2.JPG',
+      '/img/youlihong/general/3.JPG',
+    ]
+  },
+  {
+    id: 25,
     name: '梵文',
     category: '福利品',
     dynasty: '仿元',
@@ -420,13 +475,13 @@ export const products = [
     price: 2359,
     images: [
       '/img/fanwen/4.jpg',
-      '/img/fanwen/1.jpg',
-      '/img/fanwen/2.jpg',
       '/img/fanwen/3.jpg',
+      '/img/fanwen/5.JPG',
+      '/img/fanwen/6.JPG',
     ]
   },
   {
-    id: 25,
+    id: 26,
     name: '两龙一凤炉式杯',
     category: '单品',
     dynasty: '仿明',
@@ -434,14 +489,13 @@ export const products = [
     description: '',
     price: 5888,
     images: [
-      '/img/twoLong/1.jpg',
-      '/img/twoLong/2.jpg',
-      '/img/twoLong/3.jpg',
-      '/img/twoLong/4.jpg',
+      '/img/twoLong/1.JPG',
+      '/img/twoLong/2.JPG',
+      '/img/twoLong/3.JPG',
     ]
   },
   {
-    id: 26,
+    id: 27,
     name: '缠枝莲盖置',
     category: '单品',
     dynasty: '仿明',
@@ -449,13 +503,13 @@ export const products = [
     description: '',
     price: 3299,
     images: [
-      '/img/gaizhi/1.jpg',
+      '/img/gaizhi/1.JPG',
       '/img/gaizhi/3.jpg',
       '/img/gaizhi/2.jpg',
     ]
   },
   {
-    id: 27,
+    id: 28,
     name: '宝相盖置',
     category: '单品',
     dynasty: '仿清',
@@ -463,13 +517,11 @@ export const products = [
     description: '',
     price: 3299,
     images: [
-      '/img/gaizhi/11.jpg',
-      '/img/gaizhi/22.jpg',
-      '/img/gaizhi/33.jpg',
+      '/img/gaizhi/11.JPG',
     ]
   },
   {
-    id: 28,
+    id: 29,
     name: '釉里红鸡心杯',
     category: '单品',
     dynasty: '仿明',
@@ -477,12 +529,12 @@ export const products = [
     description: '',
     price: 4999,
     images: [
-      '/img/other/1.jpg',
-      '/img/other/2.jpg',
+      '/img/other/1.JPG',
+      '/img/other/2.JPG',
     ]
   },
   {
-    id: 29,
+    id: 30,
     name: '釉里红小压手杯',
     category: '单品',
     dynasty: '仿明',
@@ -490,12 +542,13 @@ export const products = [
     description: '',
     price: 4999,
     images: [
-      '/img/other/3.jpg',
-      '/img/other/4.jpg',
+      '/img/other/3.JPG',
+      '/img/other/4.JPG',
+      '/img/other/10.png',
     ]
   },
   {
-    id: 30,
+    id: 31,
     name: '明龙釉里红马蹄杯',
     category: '单品',
     dynasty: '仿明',
@@ -503,13 +556,13 @@ export const products = [
     description: '',
     price: 6999,
     images: [
-      '/img/other/7.jpg',
-      '/img/other/8.jpg',
-      '/img/other/9.jpg',
+      '/img/other/7.JPG',
+      '/img/other/8.JPG',
+      '/img/other/9.JPG',
     ]
   },
   {
-    id: 31,
+    id: 32,
     name: '釉里红盖置',
     category: '单品',
     dynasty: '仿明',
@@ -517,12 +570,26 @@ export const products = [
     description: '',
     price: 4999,
     images: [
-      '/img/other/5.jpg',
-      '/img/other/6.jpg',
+      '/img/other/5.JPG',
+      '/img/other/6.JPG',
     ]
   },
   {
-    id: 32,
+    id: 33,
+    name: '松竹梅提梁壶',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '',
+    price: 16999,
+    images: [
+      '/img/other/11.JPG',
+      '/img/other/12.JPG',
+      '/img/other/13.JPG',
+    ]
+  },
+  {
+    id: 34,
     name: '万花可乐杯',
     category: '单品',
     dynasty: '仿清',
@@ -530,15 +597,61 @@ export const products = [
     description: '',
     price: 3299,
     images: [
-      '/img/flowerCola/1.jpg',
-      '/img/flowerCola/2.jpg',
+      '/img/flowerCola/1.JPG',
+      '/img/flowerCola/2.JPG',
+    ]
+  },
+  {
+    id: 35,
+    name: '仙人乘槎（柴窑）',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 9999,
+    images: [
+      '/img/chaiyao/3.JPG',
+      '/img/chaiyao/4.JPG',
+      '/img/chaiyao/5.JPG',
+    ]
+  },
+  {
+    id: 36,
+    name: '宝相炉式杯（柴窑）',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '',
+    price: 9999,
+    images: [
+      '/img/chaiyao/1.JPG',
+      '/img/chaiyao/2.JPG',
+    ]
+  },
+  {
+    id: 37,
+    name: '定风波',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    cupPrice: 2088,
+    gaiwanPrice: 3088,
+    price: 7199,
+    images: [
+      '/img/dingfengbo/1.JPG',
+      '/img/dingfengbo/2.JPG',
+      '/img/dingfengbo/3.JPG',
+      '/img/dingfengbo/4.JPG',
+      '/img/dingfengbo/5.JPG',
+      '/img/dingfengbo/6.JPG',
     ]
   },
   {
     id: 12345,
     name: '鳄鱼茶宠',
     category: '单品',
-    dynasty: '仿元',
+    dynasty: '仿清',
     craft: ['青花'],
     description: '',
     price: 99999999,

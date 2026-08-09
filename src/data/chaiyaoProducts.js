@@ -9,21 +9,22 @@ export const chaiyaoProducts = [
         description: '',
         price: 9999,
         images: [
-            '/img/chaiyao/3.jpg',
-            '/img/chaiyao/4.jpg',
+            '/img/chaiyao/3.JPG',   
+            '/img/chaiyao/4.JPG',
+            '/img/chaiyao/5.JPG',
         ]
     },
     {
         id: 20002,
         name: '宝相炉式杯',
         category: '单品',
-        dynasty: '仿清',
+        dynasty: '仿明',
         craft: ['青花'],
         description: '',
         price: 9999,
         images: [
-            '/img/chaiyao/1.jpg',
-            '/img/chaiyao/2.jpg',
+            '/img/chaiyao/1.JPG',
+            '/img/chaiyao/2.JPG',
         ]
     },
 ]

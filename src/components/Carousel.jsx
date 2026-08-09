@@ -70,6 +70,7 @@ export default function Carousel({ images, productName, onImageClick }) {
         className="carousel-image"
         src={images[currentIndex]}
         alt={productName}
+        loading="lazy"
         onLoad={() => setLoading(false)}
         onClick={() => onImageClick && onImageClick(currentIndex)}
       />

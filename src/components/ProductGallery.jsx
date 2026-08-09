@@ -62,39 +62,45 @@ export default function ProductGallery({ products }) {
         <div className="filters">
           <div className="filter-group">
             <span className="filter-title">类型</span>
-            {categoryOptions.map(c => (
-              <button
-                key={c}
-                className={`filter-btn ${categoryFilter === c ? 'active' : ''}`}
-                onClick={() => setCategoryFilter(c)}
-              >
-                {c}
-              </button>
-            ))}
+            <div className="filter-buttons">
+              {categoryOptions.map(c => (
+                <button
+                  key={c}
+                  className={`filter-btn ${categoryFilter === c ? 'active' : ''}`}
+                  onClick={() => setCategoryFilter(c)}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="filter-group">
             <span className="filter-title">朝代</span>
-            {dynastyOptions.map(d => (
-              <button
-                key={d}
-                className={`filter-btn ${dynastyFilter === d ? 'active' : ''}`}
-                onClick={() => setDynastyFilter(d)}
-              >
-                {d}
-              </button>
-            ))}
+            <div className="filter-buttons">
+              {dynastyOptions.map(d => (
+                <button
+                  key={d}
+                  className={`filter-btn ${dynastyFilter === d ? 'active' : ''}`}
+                  onClick={() => setDynastyFilter(d)}
+                >
+                  {d}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="filter-group">
             <span className="filter-title">工艺</span>
-            {craftOptions.map(c => (
-              <button
-                key={c}
-                className={`filter-btn ${(c === '全部' ? craftFilter.length === 0 : craftFilter.includes(c)) ? 'active' : ''}`}
-                onClick={() => toggleCraft(c)}
-              >
-                {c}
-              </button>
-            ))}
+            <div className="filter-buttons">
+              {craftOptions.map(c => (
+                <button
+                  key={c}
+                  className={`filter-btn ${(c === '全部' ? craftFilter.length === 0 : craftFilter.includes(c)) ? 'active' : ''}`}
+                  onClick={() => toggleCraft(c)}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
         <div className="products-grid">
