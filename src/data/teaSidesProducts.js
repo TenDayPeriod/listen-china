@@ -68,6 +68,37 @@ export const teaSidesProducts = [
         ]
     },
     {
+        id: 300007,
+        name: '明龙茶则',
+        category: '单品',
+        dynasty: '仿明',
+        craft: ['青花'],
+        description: '',
+        price: 4300,
+        images: [
+            '/img/chaze/1.JPG',
+            '/img/chaze/2.JPG',
+            '/img/chaze/3.JPG',
+            '/img/chaze/4.JPG',
+            '/img/chaze/5.JPG',
+        ]
+    },
+    {
+        id: 300008,
+        name: '釉里红葫芦香插',
+        category: '单品',
+        dynasty: '仿明',
+        craft: ['青花', '釉里红'],
+        description: '',
+        price: 2388,
+        images: [
+            '/img/xiangcha/1.JPG',
+            '/img/xiangcha/2.JPG',
+            '/img/xiangcha/3.JPG',
+            '/img/xiangcha/4.JPG',
+        ]
+    },
+    {
         id: 300005,
         name: '鳄鱼茶宠',
         category: '单品',

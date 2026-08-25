@@ -19,6 +19,21 @@ export const products = [
   },
   {
     id: 2,
+    name: '缠枝小客杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '20ml',
+    price: 1288,
+    images: [
+      '/img/littleCup/1.JPG',
+      '/img/littleCup/2.JPG',
+      '/img/littleCup/3.JPG',
+      '/img/littleCup/4.JPG',
+    ]
+  },
+  {
+    id: 3,
     name: '冰梅',
     category: '套组',
     dynasty: '仿清',
@@ -71,7 +86,7 @@ export const products = [
     ]
   },
   {
-    id: 4001,
+    id: 5,
     name: '釉里红小客杯',
     category: '单品',
     dynasty: '仿明',
@@ -84,7 +99,7 @@ export const products = [
     ]
   },
   {
-    id: 4002,
+    id: 6,
     name: '釉里红可乐杯',
     category: '单品',
     dynasty: '仿明',
@@ -101,7 +116,24 @@ export const products = [
     ]
   },
   {
-    id: 5,
+    id: 7,
+    name: '明龙可乐杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '320ml可乐杯/420ml可乐杯',
+    price: 5999,
+    images: [
+      '/img/colaLong/1.JPG',
+      '/img/colaLong/2.JPG',
+      '/img/colaLong/3.JPG',
+      '/img/colaLong/4.JPG',
+      '/img/colaLong/6.JPG',
+      '/img/colaLong/5.JPG',
+    ]
+  },
+  {
+    id: 8,
     name: '青花松竹梅',
     category: '套组',
     dynasty: '仿明',
@@ -122,7 +154,7 @@ export const products = [
     ]
   },
   {
-    id: 500001,
+    id: 9,
     name: '青花松竹梅八方杯',
     category: '单品',
     dynasty: '仿明',
@@ -136,7 +168,7 @@ export const products = [
     ]
   },
   {
-    id: 6,
+    id: 10,  
     name: '釉里红松竹梅',
     category: '套组',
     dynasty: '仿明',
@@ -156,7 +188,7 @@ export const products = [
     ]
   },
   {
-    id: 600001,
+    id: 11,
     name: '釉里红松竹梅八方杯',
     category: '单品',
     dynasty: '仿明',
@@ -170,7 +202,21 @@ export const products = [
     ]
   },
   {
-    id: 7,
+    id: 12,
+    name: '钱多多炉式杯',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花', '釉上彩'],
+    description: '',
+    price: 4300,
+    images: [
+      '/img/duoduo/1.JPG',
+      '/img/duoduo/2.jpg',
+      '/img/duoduo/3.JPG',
+    ]
+  },
+  {
+    id: 13,
     name: '江崖海水',
     category: '套组',
     dynasty: '仿明',
@@ -189,7 +235,7 @@ export const products = [
     ]
   },
   {
-    id: 8,
+    id: 14,
     name: '云龙',
     category: '套组',
     dynasty: '仿清',
@@ -207,7 +253,7 @@ export const products = [
     ]
   },
   {
-    id: 9,
+    id: 15,
     name: '矾红鳜鱼',
     category: '套组',
     dynasty: '仿明',
@@ -225,7 +271,7 @@ export const products = [
     ]
   },
   {
-    id: 10,
+    id: 16,
     name: '墨龙1.0',
     category: '套组',
     dynasty: '仿清',
@@ -243,7 +289,7 @@ export const products = [
     ]
   },
   {
-    id: 11,
+    id: 17,
     name: '墨龙2.0',
     category: '套组',
     dynasty: '仿清',
@@ -260,8 +306,24 @@ export const products = [
       '/img/mo2/4.jpg',
     ]
   },
+
   {
-    id: 12,
+    id: 18,
+    name: '龙凤压手杯',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['矾红', '釉上彩', '青花'],
+    description: '',
+    price: 7999,
+    images: [
+      '/img/longfeng/1.JPG',
+      '/img/longfeng/2.JPG',
+      '/img/longfeng/3.JPG',
+      '/img/longfeng/4.JPG',
+    ]
+  },
+  {
+    id: 19,
     name: '慵懒熊猫(矾红枫叶)',
     category: '套组',
     dynasty: '仿清',
@@ -278,7 +340,7 @@ export const products = [
     ]
   },
   {
-    id: 13,
+    id: 20,
     name: '十二报喜图',
     category: '套组',
     dynasty: '仿清',
@@ -297,7 +359,23 @@ export const products = [
     ]
   },
   {
-    id: 14,
+    id: 21,
+    name: '满绘凤凰盖碗',
+    category: '套组',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 12888,
+    gaiwanPrice: 12888,
+    images: [
+      '/img/fenghuang/1.JPG',
+      '/img/fenghuang/2.JPG',
+      '/img/fenghuang/3.JPG',
+      '/img/fenghuang/4.JPG',
+    ]
+  },
+  {
+    id: 22,
     name: '仿清鱼藻',
     category: '套组',
     dynasty: '仿清',
@@ -316,7 +394,22 @@ export const products = [
     ]
   },
   {
-    id: 15,
+    id: 23,
+    name: '宝相普洱杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '',
+    price: 2380,
+    images: [
+      '/img/baoxiang/1.JPG',
+      '/img/baoxiang/2.JPG',
+      '/img/baoxiang/3.JPG',
+      '/img/baoxiang/4.JPG',
+    ]
+  },
+  {
+    id: 24,
     name: '五龙八方杯',
     category: '单品',
     dynasty: '仿明',
@@ -330,7 +423,7 @@ export const products = [
     ]
   },
   {
-    id: 16,
+    id: 25,
     name: '单线缠枝',
     category: '套组',
     dynasty: '仿明',
@@ -344,7 +437,7 @@ export const products = [
     ]
   },
   {
-    id: 17,
+    id: 26,
     name: '仿元龙纹',
     category: '套组',
     dynasty: '仿元',
@@ -359,7 +452,7 @@ export const products = [
     ]
   },
   {
-    id: 18,
+    id: 27,
     name: '仿元鱼藻',
     category: '套组',
     dynasty: '仿元',
@@ -373,7 +466,7 @@ export const products = [
     ]
   },
   {
-    id: 19,
+    id: 28,
     name: '太平有象',
     category: '套组',
     dynasty: '仿元',
@@ -387,7 +480,7 @@ export const products = [
     ]
   },
   {
-    id: 20,
+    id: 29,
     name: '单线牡丹',
     category: '套组',
     dynasty: '仿元',
@@ -402,7 +495,7 @@ export const products = [
     ]
   },
   {
-    id: 21,
+    id: 30,
     name: '四向牡丹',
     category: '套组',
     dynasty: '仿元',
@@ -418,7 +511,7 @@ export const products = [
     ]
   },
   {
-    id: 22,
+    id: 31,
     name: '一鹭连科',
     category: '套组',
     dynasty: '仿元',
@@ -434,7 +527,7 @@ export const products = [
     ]
   },
   {
-    id: 23,
+    id: 32,
     name: '双狮绣球',
     category: '套组',
     dynasty: '仿元',
@@ -450,7 +543,7 @@ export const products = [
     ]
   },
   {
-    id: 24,
+    id: 33,
     name: '鱼藻釉里红将军罐',
     category: '单品',
     dynasty: '仿明',
@@ -464,7 +557,7 @@ export const products = [
     ]
   },
   {
-    id: 25,
+    id: 34,
     name: '梵文',
     category: '福利品',
     dynasty: '仿元',
@@ -481,7 +574,7 @@ export const products = [
     ]
   },
   {
-    id: 26,
+    id: 35,
     name: '两龙一凤炉式杯',
     category: '单品',
     dynasty: '仿明',
@@ -495,7 +588,7 @@ export const products = [
     ]
   },
   {
-    id: 27,
+    id: 36,
     name: '缠枝莲盖置',
     category: '单品',
     dynasty: '仿明',
@@ -509,7 +602,22 @@ export const products = [
     ]
   },
   {
-    id: 28,
+    id: 37,
+    name: '釉里红葫芦香插',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花', '釉里红'],
+    description: '',
+    price: 2388,
+    images: [
+      '/img/xiangcha/1.JPG',
+      '/img/xiangcha/2.JPG',
+      '/img/xiangcha/3.JPG',
+      '/img/xiangcha/4.JPG',
+    ]
+  },
+  {
+    id: 38,
     name: '宝相盖置',
     category: '单品',
     dynasty: '仿清',
@@ -521,7 +629,7 @@ export const products = [
     ]
   },
   {
-    id: 29,
+    id: 39,
     name: '釉里红鸡心杯',
     category: '单品',
     dynasty: '仿明',
@@ -534,7 +642,7 @@ export const products = [
     ]
   },
   {
-    id: 30,
+    id: 40,
     name: '釉里红小压手杯',
     category: '单品',
     dynasty: '仿明',
@@ -548,7 +656,7 @@ export const products = [
     ]
   },
   {
-    id: 31,
+    id: 41,
     name: '明龙釉里红马蹄杯',
     category: '单品',
     dynasty: '仿明',
@@ -562,7 +670,7 @@ export const products = [
     ]
   },
   {
-    id: 32,
+    id: 42,
     name: '釉里红盖置',
     category: '单品',
     dynasty: '仿明',
@@ -575,7 +683,21 @@ export const products = [
     ]
   },
   {
-    id: 33,
+    id: 43,
+    name: '貔貅公道杯',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 6200,
+    images: [
+      '/img/other/14.JPG',
+      '/img/other/15.JPG',
+      '/img/other/16.JPG',
+    ]
+  },
+  {
+    id: 44,
     name: '松竹梅提梁壶',
     category: '单品',
     dynasty: '仿明',
@@ -589,7 +711,7 @@ export const products = [
     ]
   },
   {
-    id: 34,
+    id: 45,
     name: '万花可乐杯',
     category: '单品',
     dynasty: '仿清',
@@ -602,7 +724,23 @@ export const products = [
     ]
   },
   {
-    id: 35,
+    id: 46,
+    name: '明龙茶则',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '',
+    price: 4300,
+    images: [
+      '/img/chaze/1.JPG',
+      '/img/chaze/2.JPG',
+      '/img/chaze/3.JPG',
+      '/img/chaze/4.JPG',
+      '/img/chaze/5.JPG',
+    ]
+  },
+  {
+    id: 47,
     name: '仙人乘槎（柴窑）',
     category: '单品',
     dynasty: '仿清',
@@ -616,7 +754,7 @@ export const products = [
     ]
   },
   {
-    id: 36,
+    id: 48,
     name: '宝相炉式杯（柴窑）',
     category: '单品',
     dynasty: '仿明',
@@ -629,7 +767,7 @@ export const products = [
     ]
   },
   {
-    id: 37,
+    id: 49,
     name: '定风波',
     category: '单品',
     dynasty: '仿清',

@@ -29,16 +29,14 @@ export default function ProductCard({ product, onImageClick }) {
       />
       <div className="product-info">
         <h3 className="product-name">{product.name}</h3>
-        {product.description ? (
-          <div className="description-wrapper">
-            <p className="product-description">{product.description}</p>
-            <div className="description-tooltip">{product.description}</div>
-          </div>
-        ) : (
-          <div className="description-wrapper">
-            <p className="product-description">暂无简介</p>
-          </div>
-        )}
+        <div className="description-wrapper">
+          {product.description && (
+            <>
+              <p className="product-description">{product.description}</p>
+              <div className="description-tooltip">{product.description}</div>
+            </>
+          )}
+        </div>
         <div className="product-stock">
           {stockItems.length > 0 && (
             <>
@@ -55,16 +53,14 @@ export default function ProductCard({ product, onImageClick }) {
             </>
           )}
         </div>
-        {subPrices.length > 0 && (
-          <div className="product-subprices">
-            {subPrices.map(item => (
-              <div key={item.label} className="subprice-item">
-                <span className="subprice-label">{item.label}</span>
-                <span className="subprice-value">¥{formatPrice(item.value)}</span>
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="product-subprices">
+          {subPrices.map(item => (
+            <div key={item.label} className="subprice-item">
+              <span className="subprice-label">{item.label}</span>
+              <span className="subprice-value">¥{formatPrice(item.value)}</span>
+            </div>
+          ))}
+        </div>
         <div className="product-price">
           <span className="price-label">总价</span>
           <span className="price-symbol">¥</span>

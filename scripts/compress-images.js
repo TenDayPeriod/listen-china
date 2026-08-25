@@ -3,7 +3,12 @@ import { readdir, stat, unlink, mkdir, rm, rename } from 'fs/promises'
 import { join, relative, dirname, extname } from 'path'
 import { execSync } from 'child_process'
 
-const IMG_DIR = 'public/img'
+// 用法: node scripts/compress-images.js [目标目录]
+//   不传参数则压缩 public/img 下全部图片
+//   传参则只压缩指定目录（支持子目录递归），如:
+//     node scripts/compress-images.js public/img/colaLong
+//     node scripts/compress-images.js public/img/youlihong/cola
+const IMG_DIR = process.argv[2] || 'public/img'
 const TMP_DIR = 'public/.img-tmp'
 const MAX_WIDTH = 1200
 const QUALITY = 80

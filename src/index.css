@@ -182,7 +182,7 @@ body {
 }
 
 .chaiyao-page .product-stock {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
+  color: #9eb4c2;
 }
 
 .chaiyao-page .stock-item {
@@ -195,8 +195,9 @@ body {
   background: rgba(107, 142, 158, 0.15);
 }
 
-.chaiyao-page .product-subprices {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
+.chaiyao-page .product-price,
+.chaiyao-page .product-subprices:has(.subprice-item) {
+  border-top-color: rgba(255, 255, 255, 0.1);
 }
 
 .chaiyao-page .subprice-label {
@@ -326,7 +327,7 @@ body {
 }
 
 .teaside-page .product-stock {
-  border-bottom-color: rgba(168, 200, 144, 0.3);
+  color: #7a8a6a;
 }
 
 .teaside-page .stock-item {
@@ -339,8 +340,9 @@ body {
   background: #eaf2e2;
 }
 
-.teaside-page .product-subprices {
-  border-bottom-color: rgba(168, 200, 144, 0.3);
+.teaside-page .product-price,
+.teaside-page .product-subprices:has(.subprice-item) {
+  border-top-color: rgba(168, 200, 144, 0.3);
 }
 
 .teaside-page .subprice-label {
@@ -648,14 +650,20 @@ body {
   font-size: 1.3rem;
   font-weight: 600;
   color: #2d2d2d;
-  margin-bottom: 0.8rem;
+  /* margin-bottom: 0.8rem; */
   letter-spacing: 0.1em;
+  min-height: 2.2em;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .description-wrapper {
   position: relative;
   margin-bottom: 1.2rem;
   flex-shrink: 0;
+  min-height: calc(1em * 3);
 }
 
 .product-description {
@@ -666,7 +674,7 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: calc(1.8em * 3);
+  min-height: calc(1em * 3);
 }
 
 .description-tooltip {
@@ -707,9 +715,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px dashed #e0d6c8;
+  min-height: 2.2rem;
+}
+
+.product-subprices:has(.subprice-item) {
+  padding-top: 0.6rem;
+  border-top: 1px dashed #e0d6c8;
 }
 
 .subprice-item {
@@ -733,6 +744,8 @@ body {
   align-items: baseline;
   gap: 0.3rem;
   margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px dashed #e0d6c8;
 }
 
 .price-label {
@@ -758,11 +771,9 @@ body {
   flex-wrap: wrap;
   gap: 0.3rem;
   margin-bottom: 0.6rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px dashed #e0d6c8;
   font-size: 0.85rem;
   line-height: 1.6;
-  height: 2.4rem;
+  min-height: 2.6rem;
   overflow: hidden;
   color: #666;
 }
@@ -1022,6 +1033,7 @@ body {
     margin-bottom: 0.4rem;
     letter-spacing: 0.05em;
     line-height: 1.4;
+    min-height: 1.4em;
     -webkit-line-clamp: 1;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -1029,17 +1041,24 @@ body {
   }
 
   .description-wrapper {
-    display: none;
+    margin-bottom: 0.4rem;
+    flex-shrink: 0;
+    min-height: calc(1.6em * 1);
+  }
+
+  .product-description {
+    font-size: 0.7rem;
+    -webkit-line-clamp: 1;
+    min-height: calc(1.6em * 1);
+    line-height: 1.6;
   }
 
   .product-stock {
     font-size: 0.72rem;
     margin-bottom: 0.4rem;
-    padding-bottom: 0.4rem;
     gap: 0.25rem;
-    min-height: 0;
-    height: auto;
-    overflow: visible;
+    min-height: 1.6rem;
+    overflow: hidden;
     flex-wrap: wrap;
   }
 
@@ -1059,7 +1078,7 @@ body {
   .product-subprices {
     gap: 0.25rem 0.5rem;
     margin-bottom: 0.35rem;
-    padding-bottom: 0.35rem;
+    min-height: 1.6rem;
   }
 
   .subprice-item {
@@ -1069,7 +1088,8 @@ body {
 
   .product-price {
     gap: 0.2rem;
-    margin-top: 0.1rem;
+    margin-top: auto;
+    padding-top: 0.35rem;
   }
 
   .price-label {
@@ -1216,12 +1236,23 @@ body {
   .product-name {
     font-size: 0.85rem;
     margin-bottom: 0.3rem;
+    min-height: 1.4em;
+  }
+
+  .description-wrapper {
+    margin-bottom: 0.3rem;
+    min-height: calc(1.4em * 1);
+  }
+
+  .product-description {
+    font-size: 0.65rem;
+    min-height: calc(1.4em * 1);
+    line-height: 1.4;
   }
 
   .product-stock {
-    min-height: 0;
+    min-height: 1.4rem;
     margin-bottom: 0.3rem;
-    padding-bottom: 0.3rem;
   }
 
   .stock-item {
@@ -1231,8 +1262,19 @@ body {
     border-radius: 7px;
   }
 
+  .product-subprices {
+    gap: 0.2rem 0.4rem;
+    margin-bottom: 0.3rem;
+    min-height: 1.4rem;
+  }
+
   .subprice-item {
     font-size: 0.68rem;
+  }
+
+  .product-price {
+    margin-top: auto;
+    padding-top: 0.3rem;
   }
 
   .price-value {
