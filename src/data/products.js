@@ -168,7 +168,7 @@ export const products = [
     ]
   },
   {
-    id: 10,  
+    id: 10,
     name: '釉里红松竹梅',
     category: '套组',
     dynasty: '仿明',
@@ -323,6 +323,22 @@ export const products = [
     ]
   },
   {
+    id: 21,
+    name: '满绘凤凰盖碗',
+    category: '套组',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 12888,
+    gaiwanPrice: 12888,
+    images: [
+      '/img/fenghuang/1.JPG',
+      '/img/fenghuang/2.JPG',
+      '/img/fenghuang/3.JPG',
+      '/img/fenghuang/4.JPG',
+    ]
+  },
+  {
     id: 19,
     name: '慵懒熊猫(矾红枫叶)',
     category: '套组',
@@ -356,22 +372,6 @@ export const products = [
       '/img/happy/3.jpg',
       '/img/happy/4.jpg',
       '/img/happy/5.jpg',
-    ]
-  },
-  {
-    id: 21,
-    name: '满绘凤凰盖碗',
-    category: '套组',
-    dynasty: '仿清',
-    craft: ['青花'],
-    description: '',
-    price: 12888,
-    gaiwanPrice: 12888,
-    images: [
-      '/img/fenghuang/1.JPG',
-      '/img/fenghuang/2.JPG',
-      '/img/fenghuang/3.JPG',
-      '/img/fenghuang/4.JPG',
     ]
   },
   {
