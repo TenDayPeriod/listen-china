@@ -145,6 +145,30 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.chaiyao-page .filters-header:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.chaiyao-page .filters-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.chaiyao-page .filters.collapsed .filters-header {
+  border-bottom-color: transparent;
+}
+
+.chaiyao-page .filters-header-title {
+  color: #e8e4dc;
+}
+
+.chaiyao-page .filters-arrow {
+  color: #9eb4c2;
+}
+
+.chaiyao-page .filters-header:hover .filters-arrow {
+  color: #6b8e9e;
+}
+
 .chaiyao-page .filter-title {
   color: #9eb4c2;
 }
@@ -288,6 +312,30 @@ body {
 .teaside-page .filters {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(168, 200, 144, 0.2);
+}
+
+.teaside-page .filters-header:hover {
+  background: rgba(74, 107, 58, 0.05);
+}
+
+.teaside-page .filters-header {
+  border-bottom-color: rgba(74, 107, 58, 0.15);
+}
+
+.teaside-page .filters.collapsed .filters-header {
+  border-bottom-color: transparent;
+}
+
+.teaside-page .filters-header-title {
+  color: #4a6b3a;
+}
+
+.teaside-page .filters-arrow {
+  color: #7a8a6a;
+}
+
+.teaside-page .filters-header:hover .filters-arrow {
+  color: #8a9a6a;
 }
 
 .teaside-page .filter-title {
@@ -443,13 +491,83 @@ body {
 
 .filters {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  flex-direction: column;
   margin-bottom: 2rem;
-  padding: 1rem 1.2rem;
   background: var(--card-bg);
   border-radius: 8px;
   box-shadow: var(--shadow-light);
+  overflow: hidden;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.95rem 1.2rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.25s ease;
+}
+
+.filters.collapsed .filters-header {
+  border-bottom-color: transparent;
+}
+
+.filters-header:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.filters-header-title {
+  font-size: 1rem;
+  color: #2d2d2d;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+
+.filters-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  color: #888;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease;
+}
+
+.filters-header:hover .filters-arrow {
+  color: var(--accent-color);
+}
+
+.filters.collapsed .filters-arrow {
+  transform: rotate(-90deg);
+}
+
+.filters-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 1.2rem 1rem;
+  transition:
+    grid-template-rows 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filters.collapsed .filters-content {
+  grid-template-rows: 0fr;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.filters-inner {
+  overflow: hidden;
+  min-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .filter-group {
@@ -494,6 +612,37 @@ body {
   background: var(--accent-color);
   border-color: var(--accent-color);
   color: #fff;
+}
+
+.search-group {
+  margin-left: auto;
+}
+
+.search-box {
+  flex: 1;
+}
+
+.search-input {
+  padding: 0.4rem 1rem;
+  width: 220px;
+  max-width: 100%;
+  background: transparent;
+  border: 1px solid #e0d6c8;
+  border-radius: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-input:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .section-title {
@@ -952,9 +1101,29 @@ body {
   }
 
   .filters {
-    gap: 0.6rem 0.7rem;
-    padding: 0.65rem 0.7rem;
     margin-bottom: 1rem;
+  }
+
+  .filters-header {
+    padding: 0.75rem 0.7rem;
+  }
+
+  .filters-header-title {
+    font-size: 0.9rem;
+  }
+
+  .filters-arrow {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+  }
+
+  .filters-content {
+    padding: 0 0.7rem 0.65rem;
+  }
+
+  .filters-inner {
+    gap: 0.6rem 0.7rem;
   }
 
   .filter-group {
@@ -985,6 +1154,17 @@ body {
 
   .filter-btn:active {
     transform: scale(0.96);
+  }
+
+  .search-group {
+    margin-left: 0;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    min-height: 32px;
   }
 
   .tagline {

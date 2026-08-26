@@ -769,13 +769,14 @@ export const products = [
   {
     id: 49,
     name: '定风波',
-    category: '单品',
+    category: '套组',
     dynasty: '仿清',
     craft: ['青花'],
-    description: '',
+    description: '容天杯与压手杯同价，套组可自由搭配',
     cupPrice: 2088,
     gaiwanPrice: 3088,
-    price: 7199,
+    saucerPrice: 3088,
+    price: 8199,
     images: [
       '/img/dingfengbo/1.JPG',
       '/img/dingfengbo/2.JPG',
@@ -783,6 +784,20 @@ export const products = [
       '/img/dingfengbo/4.JPG',
       '/img/dingfengbo/5.JPG',
       '/img/dingfengbo/6.JPG',
+    ]
+  },
+  {
+    id: 50,
+    name: '定风波小壶',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '100ml/130ml',
+    price: 3200,
+    images: [
+      '/img/dingfengbo/7.JPG',
+      '/img/dingfengbo/8.JPG',
+      '/img/dingfengbo/9.JPG',
     ]
   },
   {
