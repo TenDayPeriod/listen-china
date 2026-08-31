@@ -394,6 +394,25 @@ export const products = [
     ]
   },
   {
+    id: 51,
+    name: '经典宝相套组',
+    category: '套组',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '',
+    cupPrice: 3888,
+    gaiwanPrice: 5888,
+    saucerPrice: 5888,
+    price: 14999,
+    images: [
+      '/img/baoxiang/5.JPG',
+      '/img/baoxiang/6.JPG',
+      '/img/baoxiang/7.JPG',
+      '/img/baoxiang/8.JPG',
+      '/img/baoxiang/9.JPG',
+    ]
+  },
+  {
     id: 23,
     name: '宝相普洱杯',
     category: '单品',
@@ -694,6 +713,21 @@ export const products = [
       '/img/other/14.JPG',
       '/img/other/15.JPG',
       '/img/other/16.JPG',
+    ]
+  },
+  {
+    id: 52,
+    name: '麒麟踏浪八方杯',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 4200,
+    images: [
+      '/img/qilin/1.JPG',
+      '/img/qilin/2.JPG',
+      '/img/qilin/3.JPG',
+      '/img/qilin/4.JPG',
     ]
   },
   {

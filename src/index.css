@@ -970,6 +970,15 @@ body {
   padding: 2rem;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
+
+  .wechat {
+    color: #007bff;
+    cursor: copy;
+  }
+
+  .wechat:hover {
+    color: #0056b3;
+  }
 }
 
 .lightbox {
@@ -1360,6 +1369,7 @@ body {
     padding: 1.5rem 1rem;
     font-size: 0.78rem;
   }
+
 
   .empty-state {
     padding: 3rem 1rem;
