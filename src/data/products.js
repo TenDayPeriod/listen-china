@@ -51,21 +51,24 @@ export const products = [
       '/img/bingmei/5.JPG',
     ]
   },
-  // {
-  //   id: 3,
-  //   name: '缠枝莲釉里红',
-  //   category: '套组',
-  //   dynasty: '仿明',
-  //   craft: ['青花'],
-  //   description: '',
-  //   price: 13999,
-  //   cupPrice: 3399,
-  //   gaiwanPrice: 5399,
-  //   saucerPrice: 5399,
-  //   images: [
-  //     '/img/youlihongchanzhi/1.jpg',
-  //   ]
-  // },
+  {
+    id: 53,
+    name: '鱼藻釉里红',
+    category: '套组',
+    dynasty: '仿明',
+    craft: ['青花', '釉里红'],
+    description: '',
+    price: 15600,
+    cupPrice: 3600,
+    gaiwanPrice: 6000,
+    saucerPrice: 6000,
+    images: [
+      '/img/fishRed/1.JPG',
+      '/img/fishRed/2.JPG',
+      '/img/fishRed/3.JPG',
+      '/img/fishRed/4.JPG',
+    ]
+  },
   {
     id: 4,
     name: '缠枝莲釉里红（双狮）',
@@ -713,6 +716,35 @@ export const products = [
       '/img/other/14.JPG',
       '/img/other/15.JPG',
       '/img/other/16.JPG',
+    ]
+  },
+  {
+    id: 54,
+    name: '山水釉里红普洱杯',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 5500,
+    images: [
+      '/img/shanshui/1.JPG',
+      '/img/shanshui/2.JPG',
+      '/img/shanshui/3.JPG',
+    ]
+  },
+  {
+    id: 55,
+    name: '山水楼阁闻香杯',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 5999,
+    images: [
+      '/img/shanshui/4.JPG',
+      '/img/shanshui/5.JPG',
+      '/img/shanshui/6.JPG',
+      '/img/shanshui/7.JPG',
     ]
   },
   {
