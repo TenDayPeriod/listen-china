@@ -549,6 +549,21 @@ export const products = [
     ]
   },
   {
+    id: 56,
+    name: '鱼藻炉式杯',
+    category: '单品',
+    dynasty: '仿元',
+    craft: ['青花'],
+    description: '',
+    price: 2588,
+    images: [
+      '/img/fishlu/1.JPG',
+      '/img/fishlu/2.JPG',
+      '/img/fishlu/3.JPG',
+      '/img/fishlu/4.JPG',
+    ]
+  },
+  {
     id: 32,
     name: '双狮绣球',
     category: '套组',
