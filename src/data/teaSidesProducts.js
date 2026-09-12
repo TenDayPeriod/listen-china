@@ -99,6 +99,20 @@ export const teaSidesProducts = [
         ]
     },
     {
+        id: 300009,
+        name: '海浪明龙碗',
+        category: '单品',
+        dynasty: '仿明',
+        craft: ['青花'],
+        description: '内外满工满绘三条明龙',
+        price: 7999,
+        images: [
+            '/img/wan/1.JPG',
+            '/img/wan/2.JPG',
+            '/img/wan/3.JPG',
+        ]
+    },
+    {
         id: 300005,
         name: '鳄鱼茶宠',
         category: '单品',
