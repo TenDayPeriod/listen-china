@@ -593,6 +593,21 @@ export const products = [
     ]
   },
   {
+    id: 65,
+    name: '高足鱼藻炉式杯',
+    category: '单品',
+    dynasty: '仿元',
+    craft: ['青花'],
+    description: '',
+    price: 2588,
+    images: [
+      '/img/fishlu/9.JPG',
+      '/img/fishlu/10.JPG',
+      '/img/fishlu/11.JPG',
+      '/img/fishlu/12.JPG',
+    ]
+  },
+  {
     id: 37,
     name: '双狮绣球',
     category: '套组',
@@ -692,6 +707,21 @@ export const products = [
     price: 3299,
     images: [
       '/img/gaizhi/11.JPG',
+    ]
+  },
+  {
+    id: 64,
+    name: '千佛盖碗',
+    category: '单品',
+    dynasty: '仿清',
+    craft: [],
+    description: '',
+    price: 3999,
+    images: [
+      '/img/thougod/1.JPG',
+      '/img/thougod/2.JPG',
+      '/img/thougod/3.JPG',
+      '/img/thougod/4.JPG',
     ]
   },
   {
@@ -808,6 +838,21 @@ export const products = [
   },
   {
     id: 52,
+    name: '山水八方杯',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 5800,
+    images: [
+      '/img/shanshui/8.JPG',
+      '/img/shanshui/9.JPG',
+      '/img/shanshui/10.JPG',
+      '/img/shanshui/11.JPG',
+    ]
+  },
+  {
+    id: 53,
     name: '麒麟踏浪八方杯',
     category: '单品',
     dynasty: '仿清',
@@ -822,7 +867,7 @@ export const products = [
     ]
   },
   {
-    id: 53,
+    id: 54,
     name: '松竹梅提梁壶',
     category: '单品',
     dynasty: '仿明',
@@ -836,7 +881,7 @@ export const products = [
     ]
   },
   {
-    id: 54,
+    id: 55,
     name: '万花可乐杯',
     category: '单品',
     dynasty: '仿清',
@@ -849,7 +894,7 @@ export const products = [
     ]
   },
   {
-    id: 55,
+    id: 56,
     name: '明龙茶则',
     category: '单品',
     dynasty: '仿明',
@@ -865,7 +910,7 @@ export const products = [
     ]
   },
   {
-    id: 56,
+    id: 57,
     name: '仙人乘槎（柴窑）',
     category: '单品',
     dynasty: '仿清',
@@ -879,7 +924,7 @@ export const products = [
     ]
   },
   {
-    id: 57,
+    id: 58,
     name: '宝相炉式杯（柴窑）',
     category: '单品',
     dynasty: '仿明',
@@ -892,7 +937,37 @@ export const products = [
     ]
   },
   {
-    id: 58,
+    id: 59,
+    name: '鱼藻炉式杯（柴窑）',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '',
+    price: 7999,
+    images: [
+      '/img/fishlu/5.JPG',
+      '/img/fishlu/6.JPG',
+      '/img/fishlu/7.JPG',
+      '/img/fishlu/8.JPG',
+    ]
+  },
+  {
+    id: 60,
+    name: '山水容天杯（柴窑）',
+    category: '单品',
+    dynasty: '仿清',
+    craft: ['青花'],
+    description: '',
+    price: 12999,
+    images: [
+      '/img/shanshui/12.JPG',
+      '/img/shanshui/13.JPG',
+      '/img/shanshui/14.JPG',
+      '/img/shanshui/15.JPG',
+    ]
+  },
+  {
+    id: 61,
     name: '定风波',
     category: '套组',
     dynasty: '仿清',
@@ -912,7 +987,7 @@ export const products = [
     ]
   },
   {
-    id: 59,
+    id: 62,
     name: '定风波小壶',
     category: '单品',
     dynasty: '仿清',
@@ -926,7 +1001,7 @@ export const products = [
     ]
   },
   {
-    id: 60,
+    id: 63,
     name: '海浪明龙碗',
     category: '单品',
     dynasty: '仿明',
@@ -937,6 +1012,34 @@ export const products = [
       '/img/wan/1.JPG',
       '/img/wan/2.JPG',
       '/img/wan/3.JPG',
+    ]
+  },
+    {
+    id: 66,
+    name: '平安喜乐炉式杯',
+    category: '福利品',
+    dynasty: '仿元',
+    craft: ['青花'],
+    description: '立勤堂福利品',
+    price: 1099,
+    images: [
+      '/img/gift/1.JPG',
+      '/img/gift/2.JPG',
+      '/img/gift/3.JPG',
+    ]
+  },
+    {
+    id: 67,
+    name: '荷花炉式杯',
+    category: '福利品',
+    dynasty: '仿元',
+    craft: ['青花'],
+    description: '立勤堂福利品',
+    price: 1399,
+    images: [
+      '/img/gift/4.JPG',
+      '/img/gift/5.JPG',
+      '/img/gift/6.JPG',
     ]
   },
   {

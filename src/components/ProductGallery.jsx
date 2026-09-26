@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import ProductCard from './ProductCard'
 import Lightbox from './Lightbox'
 import { categoryOptions, dynastyOptions, craftOptions } from '../data/dictionary'
 
 export default function ProductGallery({ products }) {
+  const collectionRef = useRef(null)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxProductId, setLightboxProductId] = useState(null)
   const [lightboxImageIndex, setLightboxImageIndex] = useState(0)
@@ -12,7 +13,11 @@ export default function ProductGallery({ products }) {
   const [craftFilter, setCraftFilter] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
   const [debouncedQuery, setDebouncedQuery] = useState('')
-  const [filtersCollapsed, setFiltersCollapsed] = useState(false)
+  const [filtersCollapsed, setFiltersCollapsed] = useState(true)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [pageSize, setPageSize] = useState(40)
+
+  const pageSizeOptions = [20, 40, 60, 100]
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -67,9 +72,54 @@ export default function ProductGallery({ products }) {
     return matchCategory && matchDynasty && matchCraft && matchSearch
   })
 
+  // 筛选条件或搜索词变化时回到第一页
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [categoryFilter, dynastyFilter, craftFilter, debouncedQuery])
+
+  // 翻页后滚动到商品区顶部
+  useEffect(() => {
+    const el = collectionRef.current
+    if (el) {
+      const navOffset = 70
+      const top = el.getBoundingClientRect().top + window.scrollY - navOffset
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
+  }, [currentPage])
+
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / pageSize))
+  const safePage = Math.min(currentPage, totalPages)
+  const startIndex = (safePage - 1) * pageSize
+  const pagedProducts = filteredProducts.slice(startIndex, startIndex + pageSize)
+
+  // 生成分页页码（带省略号）
+  const getPageNumbers = () => {
+    const pages = []
+    const maxVisible = 5
+    if (totalPages <= maxVisible) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i)
+      return pages
+    }
+    const left = Math.max(1, safePage - 2)
+    const right = Math.min(totalPages, safePage + 2)
+    pages.push(1)
+    if (left > 2) pages.push('...')
+    for (let i = left; i <= right; i++) {
+      if (i !== 1 && i !== totalPages) pages.push(i)
+    }
+    if (right < totalPages - 1) pages.push('...')
+    if (totalPages !== 1) pages.push(totalPages)
+    return pages
+  }
+
+  const handlePageSizeChange = (size) => {
+    setPageSize(size)
+    setCurrentPage(1)
+  }
+
   return (
     <main className="main">
-      <section className="collection">
+      <section className="collection" ref={collectionRef}>
         <div className={`filters ${filtersCollapsed ? 'collapsed' : ''}`}>
           <button
             type="button"
@@ -140,8 +190,8 @@ export default function ProductGallery({ products }) {
           </div>
         </div>
         <div className="products-grid">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map(product => (
+          {pagedProducts.length > 0 ? (
+            pagedProducts.map(product => (
               <ProductCard
                 key={product.id}
                 product={product}
@@ -152,6 +202,55 @@ export default function ProductGallery({ products }) {
             <div className="empty-state">暂无商品</div>
           )}
         </div>
+        {filteredProducts.length > 0 && (
+          <div className="pagination">
+            <div className="pagination-info">
+              共 <span className="pagination-count">{filteredProducts.length}</span> 件
+            </div>
+            <div className="pagination-pages">
+              <button
+                className="page-btn"
+                disabled={safePage <= 1}
+                onClick={() => setCurrentPage(safePage - 1)}
+              >
+                上一页
+              </button>
+              {getPageNumbers().map((p, idx) => (
+                p === '...' ? (
+                  <span key={`ellipsis-${idx}`} className="page-ellipsis">…</span>
+                ) : (
+                  <button
+                    key={p}
+                    className={`page-btn ${p === safePage ? 'active' : ''}`}
+                    onClick={() => setCurrentPage(p)}
+                  >
+                    {p}
+                  </button>
+                )
+              ))}
+              <button
+                className="page-btn"
+                disabled={safePage >= totalPages}
+                onClick={() => setCurrentPage(safePage + 1)}
+              >
+                下一页
+              </button>
+            </div>
+            <div className="pagination-size">
+              <span className="pagination-size-label">每页</span>
+              {pageSizeOptions.map(size => (
+                <button
+                  key={size}
+                  className={`page-size-btn ${pageSize === size ? 'active' : ''}`}
+                  onClick={() => handlePageSizeChange(size)}
+                >
+                  {size}
+                </button>
+              ))}
+              <span className="pagination-size-label">件</span>
+            </div>
+          </div>
+        )}
       </section>
       <Lightbox
         isOpen={lightboxOpen}

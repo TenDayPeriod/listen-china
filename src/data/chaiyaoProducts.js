@@ -9,7 +9,7 @@ export const chaiyaoProducts = [
         description: '',
         price: 9999,
         images: [
-            '/img/chaiyao/3.JPG',   
+            '/img/chaiyao/3.JPG',
             '/img/chaiyao/4.JPG',
             '/img/chaiyao/5.JPG',
         ]
@@ -25,6 +25,34 @@ export const chaiyaoProducts = [
         images: [
             '/img/chaiyao/1.JPG',
             '/img/chaiyao/2.JPG',
+        ]
+    },
+    {
+        id: 20003,
+        name: '宝相炉式杯（柴窑）',
+        category: '单品',
+        dynasty: '仿明',
+        craft: ['青花'],
+        description: '',
+        price: 9999,
+        images: [
+            '/img/chaiyao/1.JPG',
+            '/img/chaiyao/2.JPG',
+        ]
+    },
+    {
+        id: 20004,
+        name: '鱼藻炉式杯（柴窑）',
+        category: '单品',
+        dynasty: '仿明',
+        craft: ['青花'],
+        description: '',
+        price: 7999,
+        images: [
+            '/img/fishlu/5.JPG',
+            '/img/fishlu/6.JPG',
+            '/img/fishlu/7.JPG',
+            '/img/fishlu/8.JPG',
         ]
     },
 ]
