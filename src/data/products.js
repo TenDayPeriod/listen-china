@@ -474,6 +474,22 @@ export const products = [
     ]
   },
   {
+    id: 2801,
+    name: '五龙盖碗',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '',
+    price: 11999,
+    images: [
+      '/img/5longgaiwan/1.JPG',
+      '/img/5longgaiwan/2.JPG',
+      '/img/5longgaiwan/3.JPG',
+      '/img/5longgaiwan/4.JPG',
+      '/img/5longgaiwan/5.JPG',
+    ]
+  },
+  {
     id: 29,
     name: '单线缠枝',
     category: '套组',
@@ -795,7 +811,7 @@ export const products = [
   },
   {
     id: 51,
-    name: '虎公道杯',
+    name: '貔貅公道杯',
     category: '单品',
     dynasty: '仿清',
     craft: ['青花'],
@@ -843,7 +859,10 @@ export const products = [
     dynasty: '仿清',
     craft: ['青花'],
     description: '',
-    price: 5800,
+    gaiwanPrice: 9999,
+    cupPrice: 5800,
+    saucerPrice: 8999,
+    price: 24000,
     images: [
       '/img/shanshui/19.JPG',
       '/img/shanshui/20.JPG',
