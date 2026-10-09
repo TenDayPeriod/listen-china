@@ -16,15 +16,32 @@ export const chaiyaoProducts = [
     },
     {
         id: 20002,
-        name: '宝相炉式杯',
+        name: '缠枝小压手（柴窑）',
         category: '单品',
         dynasty: '仿明',
         craft: ['青花'],
-        description: '',
-        price: 9999,
+        description: '满容40ml左右',
+        price: 2688,
         images: [
-            '/img/chaiyao/1.JPG',
-            '/img/chaiyao/2.JPG',
+            '/img/chaiyao/6.JPG',
+            '/img/chaiyao/7.JPG',
+            '/img/chaiyao/8.JPG',
+            '/img/chaiyao/9.JPG',
+        ]
+    },
+    {
+        id: 20006,
+        name: '缠枝小马蹄杯（柴窑）',
+        category: '单品',
+        dynasty: '仿明',
+        craft: ['青花'],
+        description: '满容40ml左右',
+        price: 2688,
+        images: [
+            '/img/chaiyao/10.JPG',
+            '/img/chaiyao/11.JPG',
+            '/img/chaiyao/12.JPG',
+            '/img/chaiyao/13.JPG',
         ]
     },
     {
@@ -53,6 +70,21 @@ export const chaiyaoProducts = [
             '/img/fishlu/6.JPG',
             '/img/fishlu/7.JPG',
             '/img/fishlu/8.JPG',
+        ]
+    },
+    {
+        id: 20005,
+        name: '欢喜/喜乐压手杯（柴窑）',
+        category: '单品',
+        dynasty: '仿清',
+        craft: ['青花'],
+        description: '',
+        price: 1388,
+        images: [
+            '/img/gift/7.JPG',
+            '/img/gift/8.JPG',
+            '/img/gift/9.JPG',
+            '/img/gift/10.JPG',
         ]
     },
 ]
