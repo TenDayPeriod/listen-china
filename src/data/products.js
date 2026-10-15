@@ -93,8 +93,8 @@ export const products = [
     description: '',
     price: 18900,
     cupPrice: 4999,
-    gaiwanPrice: 5399,
-    saucerPrice: 5399,
+    gaiwanPrice: 6999,
+    saucerPrice: 6999,
     images: [
       '/img/youlihong/youlihongshuangshi/1.JPG',
       '/img/youlihong/youlihongshuangshi/2.JPG',
@@ -798,7 +798,7 @@ export const products = [
     id: 50,
     name: '阴阳双狮壶承',
     category: '单品',
-    dynasty: '仿清',
+    dynasty: '仿明',
     craft: ['青花'],
     description: '',
     price: 10999,
@@ -807,6 +807,21 @@ export const products = [
       '/img/twolion/2.JPG',
       '/img/twolion/3.JPG',
       '/img/twolion/4.JPG',
+    ]
+  },
+  {
+    id: 500001,
+    name: '阴阳双狮对杯',
+    category: '单品',
+    dynasty: '仿明',
+    craft: ['青花'],
+    description: '4200/个，7999/对',
+    price: 7999,
+    images: [
+      '/img/twolion/5.JPG',
+      '/img/twolion/6.JPG',
+      '/img/twolion/7.JPG',
+      '/img/twolion/8.JPG',
     ]
   },
   {
