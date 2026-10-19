@@ -62,9 +62,9 @@ export const teaSidesProducts = [
         description: '',
         price: 12000,
         images: [
-            '/img/youlihong/general/1.JPG',
-            '/img/youlihong/general/2.JPG',
-            '/img/youlihong/general/3.JPG',
+            '/img/fangming/youlihong/general/1.JPG',
+            '/img/fangming/youlihong/general/2.JPG',
+            '/img/fangming/youlihong/general/3.JPG',
         ]
     },
     {
@@ -76,11 +76,11 @@ export const teaSidesProducts = [
         description: '',
         price: 4300,
         images: [
-            '/img/chaze/1.JPG',
-            '/img/chaze/2.JPG',
-            '/img/chaze/3.JPG',
-            '/img/chaze/4.JPG',
-            '/img/chaze/5.JPG',
+            '/img/long/chaze/1.JPG',
+            '/img/long/chaze/2.JPG',
+            '/img/long/chaze/3.JPG',
+            '/img/long/chaze/4.JPG',
+            '/img/long/chaze/5.JPG',
         ]
     },
     {
@@ -107,9 +107,9 @@ export const teaSidesProducts = [
         description: '内外满工满绘三条明龙',
         price: 7999,
         images: [
-            '/img/wan/1.JPG',
-            '/img/wan/2.JPG',
-            '/img/wan/3.JPG',
+            '/img/long/wan/1.JPG',
+            '/img/long/wan/2.JPG',
+            '/img/long/wan/3.JPG',
         ]
     },
     {

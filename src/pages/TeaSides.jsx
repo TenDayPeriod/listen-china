@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import ProductGallery from '../components/ProductGallery'
+import BackToTop from '../components/BackToTop'
 import { teaSidesProducts } from '../data/teaSidesProducts'
 
 export default function TeaSides() {
@@ -15,6 +16,7 @@ export default function TeaSides() {
       <Nav theme="teaside-theme" />
       <ProductGallery products={teaSidesProducts} />
       <Footer />
+      {/* <BackToTop /> */}
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import ProductCard from './ProductCard'
 import Lightbox from './Lightbox'
 import { categoryOptions, dynastyOptions, craftOptions } from '../data/dictionary'
+import BackToTop from './BackToTop'
 
 export default function ProductGallery({ products }) {
   const collectionRef = useRef(null)
@@ -13,11 +14,18 @@ export default function ProductGallery({ products }) {
   const [craftFilter, setCraftFilter] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
   const [debouncedQuery, setDebouncedQuery] = useState('')
-  const [filtersCollapsed, setFiltersCollapsed] = useState(true)
+  const [filterOpen, setFilterOpen] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [pageSize, setPageSize] = useState(40)
 
   const pageSizeOptions = [20, 40, 60, 100]
+
+  // 已激活的筛选条件数量（用于 FAB 角标）
+  const activeFilterCount =
+    (categoryFilter !== '全部' ? 1 : 0) +
+    (dynastyFilter !== '全部' ? 1 : 0) +
+    craftFilter.length +
+    (debouncedQuery.trim() ? 1 : 0)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,6 +33,21 @@ export default function ProductGallery({ products }) {
     }, 300)
     return () => clearTimeout(timer)
   }, [searchQuery])
+
+  // 筛选抽屉打开时锁定背景滚动 + Esc 关闭
+  useEffect(() => {
+    if (!filterOpen) return
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const handleKey = (e) => {
+      if (e.key === 'Escape') setFilterOpen(false)
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => {
+      document.body.style.overflow = prevOverflow
+      window.removeEventListener('keydown', handleKey)
+    }
+  }, [filterOpen])
 
   const openLightbox = (productId, imageIndex) => {
     setLightboxProductId(productId)
@@ -117,78 +140,122 @@ export default function ProductGallery({ products }) {
     setCurrentPage(1)
   }
 
+  // 重置所有筛选条件
+  const resetFilters = () => {
+    setCategoryFilter('全部')
+    setDynastyFilter('全部')
+    setCraftFilter([])
+    setSearchQuery('')
+    setDebouncedQuery('')
+    setFilterOpen(false)
+  }
+
   return (
     <main className="main">
       <section className="collection" ref={collectionRef}>
-        <div className={`filters ${filtersCollapsed ? 'collapsed' : ''}`}>
-          <button
-            type="button"
-            className="filters-header"
-            aria-expanded={!filtersCollapsed}
-            onClick={() => setFiltersCollapsed(v => !v)}
-          >
-            <span className="filters-header-title">筛选</span>
-            <span className="filters-arrow" aria-hidden="true">▾</span>
-          </button>
-          <div className="filters-content">
-            <div className="filters-inner">
-              <div className="filter-group">
-                <span className="filter-title">类型</span>
-                <div className="filter-buttons">
-                  {categoryOptions.map(c => (
-                    <button
-                      key={c}
-                      className={`filter-btn ${categoryFilter === c ? 'active' : ''}`}
-                      onClick={() => setCategoryFilter(c)}
-                    >
-                      {c}
-                    </button>
-                  ))}
-                </div>
+        {/* 悬浮筛选按钮 */}
+        <button
+          type="button"
+          className="filter-fab"
+          aria-label="打开筛选"
+          onClick={() => setFilterOpen(true)}
+        >
+          <span className="filter-fab-icon" aria-hidden="true">⚙</span>
+          <span className="filter-fab-text">筛选</span>
+          {activeFilterCount > 0 && (
+            <span className="filter-fab-badge">{activeFilterCount}</span>
+          )}
+        </button>
+
+        {/* 筛选抽屉遮罩 */}
+        <div
+          className={`filter-backdrop ${filterOpen ? 'show' : ''}`}
+          onClick={() => setFilterOpen(false)}
+        />
+
+        {/* 筛选抽屉面板 */}
+        <aside className={`filter-drawer ${filterOpen ? 'open' : ''}`}>
+          <div className="filter-drawer-header">
+            <span className="filter-drawer-title">筛选</span>
+            <div className="filter-drawer-actions">
+              {activeFilterCount > 0 && (
+                <button
+                  type="button"
+                  className="filter-reset-btn"
+                  aria-label="重置筛选"
+                  onClick={resetFilters}
+                >
+                  <span className="filter-reset-icon" aria-hidden="true">↺</span>
+                  <span className="filter-reset-text">重置</span>
+                </button>
+              )}
+              <button
+                type="button"
+                className="filter-drawer-close"
+                aria-label="关闭筛选"
+                onClick={() => setFilterOpen(false)}
+              >
+                &times;
+              </button>
+            </div>
+          </div>
+          <div className="filter-drawer-body">
+            <div className="filter-group">
+              <span className="filter-title">类型</span>
+              <div className="filter-buttons">
+                {categoryOptions.map(c => (
+                  <button
+                    key={c}
+                    className={`filter-btn ${categoryFilter === c ? 'active' : ''}`}
+                    onClick={() => setCategoryFilter(c)}
+                  >
+                    {c}
+                  </button>
+                ))}
               </div>
-              <div className="filter-group">
-                <span className="filter-title">朝代</span>
-                <div className="filter-buttons">
-                  {dynastyOptions.map(d => (
-                    <button
-                      key={d}
-                      className={`filter-btn ${dynastyFilter === d ? 'active' : ''}`}
-                      onClick={() => setDynastyFilter(d)}
-                    >
-                      {d}
-                    </button>
-                  ))}
-                </div>
+            </div>
+            <div className="filter-group">
+              <span className="filter-title">朝代</span>
+              <div className="filter-buttons">
+                {dynastyOptions.map(d => (
+                  <button
+                    key={d}
+                    className={`filter-btn ${dynastyFilter === d ? 'active' : ''}`}
+                    onClick={() => setDynastyFilter(d)}
+                  >
+                    {d}
+                  </button>
+                ))}
               </div>
-              <div className="filter-group">
-                <span className="filter-title">工艺</span>
-                <div className="filter-buttons">
-                  {craftOptions.map(c => (
-                    <button
-                      key={c}
-                      className={`filter-btn ${(c === '全部' ? craftFilter.length === 0 : craftFilter.includes(c)) ? 'active' : ''}`}
-                      onClick={() => toggleCraft(c)}
-                    >
-                      {c}
-                    </button>
-                  ))}
-                </div>
+            </div>
+            <div className="filter-group">
+              <span className="filter-title">工艺</span>
+              <div className="filter-buttons">
+                {craftOptions.map(c => (
+                  <button
+                    key={c}
+                    className={`filter-btn ${(c === '全部' ? craftFilter.length === 0 : craftFilter.includes(c)) ? 'active' : ''}`}
+                    onClick={() => toggleCraft(c)}
+                  >
+                    {c}
+                  </button>
+                ))}
               </div>
-              <div className="filter-group search-group">
-                <span className="filter-title">搜索</span>
-                <div className="filter-buttons search-box">
-                  <input
-                    type="text"
-                    className="search-input"
-                    placeholder="按商品名称搜索"
-                    value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
-                  />
-                </div>
+            </div>
+            <div className="filter-group">
+              <span className="filter-title">搜索</span>
+              <div className="filter-buttons search-box">
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="按商品名称搜索"
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                />
               </div>
             </div>
           </div>
-        </div>
+        </aside>
         <div className="products-grid">
           {pagedProducts.length > 0 ? (
             pagedProducts.map(product => (
@@ -260,6 +327,7 @@ export default function ProductGallery({ products }) {
         onPrev={goToPrevImage}
         onNext={goToNextImage}
       />
+      <BackToTop />
     </main>
   )
 }

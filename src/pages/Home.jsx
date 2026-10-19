@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import ProductGallery from '../components/ProductGallery'
+import BackToTop from '../components/BackToTop'
 import { products } from '../data/products'
 
 export default function Home() {

@@ -66,10 +66,10 @@ export const chaiyaoProducts = [
         description: '',
         price: 7999,
         images: [
-            '/img/fishlu/5.JPG',
-            '/img/fishlu/6.JPG',
-            '/img/fishlu/7.JPG',
-            '/img/fishlu/8.JPG',
+            '/img/fangming/fishlu/5.JPG',
+            '/img/fangming/fishlu/6.JPG',
+            '/img/fangming/fishlu/7.JPG',
+            '/img/fangming/fishlu/8.JPG',
         ]
     },
     {

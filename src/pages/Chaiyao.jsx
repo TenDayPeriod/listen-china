@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import ProductGallery from '../components/ProductGallery'
+import BackToTop from '../components/BackToTop'
 import { chaiyaoProducts } from '../data/chaiyaoProducts'
 
 export default function Chaiyao() {
@@ -15,6 +16,7 @@ export default function Chaiyao() {
       <Nav theme="chaiyao-theme" />
       <ProductGallery products={chaiyaoProducts} />
       <Footer />
+      {/* <BackToTop /> */}
     </div>
   )
 }

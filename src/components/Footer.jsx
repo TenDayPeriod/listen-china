@@ -39,11 +39,12 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <p>&copy; 2026 听风轩. 传承中华瓷艺文化
-        <p>
-          联系我们
-          微信：<span className="wechat" onClick={handleCopy} title="点击复制">{copied ? '已复制 ✓' : 'H19061530106'}</span></p>
-      </p>
+      <div className="footer-content">
+        <p className="footer-copyright">&copy; 2026 听风轩. 传承中华瓷艺文化</p>
+        <p className="footer-contact">
+          联系我们　微信：<span className="wechat" onClick={handleCopy} title="点击复制">{copied ? '已复制 ✓' : 'H19061530106'}</span>
+        </p>
+      </div>
     </footer>
   )
 }
